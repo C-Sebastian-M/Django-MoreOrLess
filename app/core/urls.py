@@ -1,8 +1,8 @@
 from django.urls import path
 
-from app.core.views import inicio
+from core.views import inicio, presupuesto
 
 urlpatterns = [
-    path('uno/', inicio),
-    path('dos/', inicio)
+    path('', inicio),
+    path('presupuesto', presupuesto)
 ]
