@@ -2,117 +2,128 @@
 {% load static %}
 {% block content %}
     <div class="content-wrapper">
-    <div class="content-header">
-      <div class="container">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Perfil</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Usuario</a></li>
-              <li class="breadcrumb-item"><a href="perfil.html">Perfil</a></li>
-            </ol>
+        <div class="content-header">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Perfil</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Usuario</a></li>
+                            <li class="breadcrumb-item"><a href="perfil.html">Perfil</a></li>
+                        </ol>
 
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- Aqui va toda la info del main -->
-    <section class="content">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- Aqui va toda la info del main -->
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
 
-              <!-- Profile Image -->
-              <div class="card card-primary card-outline">
-                <div class="card-body box-profile">
-                  <div class="text-center">
-                    <img class="profile-user-img img-fluid img-circle" src="img/WhatsApp Image 2020-12-22 at 10.58.25 AM.jpeg" alt="User profile picture">
-                  </div>
+                        <!-- Profile Image -->
+                        <div class="card card-primary card-outline">
+                            <div class="card-body box-profile">
+                                <div class="text-center">
+                                    <img class="profile-user-img img-fluid img-circle"
+                                         src="img/WhatsApp Image 2020-12-22 at 10.58.25 AM.jpeg"
+                                         alt="User profile picture">
+                                </div>
 
-                  <h3 class="profile-username text-center">Oscar Barrero</h3>
+                                <h3 class="profile-username text-center">Oscar Barrero</h3>
 
-                  <p class="text-muted text-center">Software Engineer</p>
-                  <ul class="list-group list-group-unbordered mb-3">
-                    <li class="list-group-item">
-                      <b>Presupuesto</b> <a class="float-right">1.400.000</a>
-                    </li>
-                    <li class="list-group-item">
-                      <b>Gastos</b> <a class="float-right">900.000</a>
-                    </li>
-                  </ul>
-                  <a href="#" class="btn btn-primary btn-block"><b>Cambiar foto</b></a>
-                  <a href="salir.html" class="btn btn-primary btn-block"><b>Salir</b></a>
-                </div>
-                <!-- /.card-body -->
-              </div>
-              <!-- /.card -->
-            </div>
-            <!-- /.col -->
-            <div class="col-md-9">
-              <div class="card">
-                <div class="card-header p-2">
-                  <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Información</a></li>
-                  </ul>
-                </div><!-- /.card-header -->
-                <div class="card-body">
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="settings">
-                      <form class="form-horizontal">
-                        <div class="form-group row">
-                          <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputName" value="Oscar Daniel Barrero Ramirez" disabled="">
-                          </div>
+                                <p class="text-muted text-center">Software Engineer</p>
+                                <ul class="list-group list-group-unbordered mb-3">
+                                    <li class="list-group-item">
+                                        <b>Presupuesto</b> <a class="float-right">1.400.000</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b>Gastos</b> <a class="float-right">900.000</a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-block"><b>Cambiar foto</b></a>
+                                <a href="salir.html" class="btn btn-primary btn-block"><b>Salir</b></a>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-                        <div class="form-group row">
-                          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail" value="oscardanielbr@gmail.com" disabled="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputAge" class="col-sm-2 col-form-label">Edad</label>
-                          <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputAge" value="18 años" disabled="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputName2" class="col-sm-2 col-form-label">Ocupacion</label>
-                          <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName2" value="Software Engineer" disabled="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputSkills" class="col-sm-2 col-form-label">Metas</label>
-                          <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputSkills" value="1 millon de pesos" disabled="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="offset-sm-2 col-sm-10">
-                            <button type="button" class="btn btn-danger">Editar información</button>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="offset-sm-2 col-sm-10">
-                            <button type="button" class="btn btn-danger">Eliminar cuenta</button>
-                          </div>
-                        </div>
-                      </form>
+                        <!-- /.card -->
                     </div>
-                    <!-- /.tab-pane -->
-                  </div>
-                  <!-- /.tab-content -->
-                </div><!-- /.card-body -->
-              </div>
-              <!-- /.card -->
-            </div>
-          </div>
-          <!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </section>
-  </div>
+                    <!-- /.col -->
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header p-2">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Información</a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="settings">
+                                        <form class="form-horizontal">
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="inputName"
+                                                           value="Oscar Daniel Barrero Ramirez" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="inputEmail"
+                                                           value="oscardanielbr@gmail.com" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputAge" class="col-sm-2 col-form-label">Edad</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputAge"
+                                                           value="18 años" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2"
+                                                       class="col-sm-2 col-form-label">Ocupacion</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputName2"
+                                                           value="Software Engineer" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputSkills" class="col-sm-2 col-form-label">Metas</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputSkills"
+                                                           value="1 millon de pesos" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="offset-sm-2 col-sm-10">
+                                                    <button type="button" class="btn btn-danger">Editar información
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="offset-sm-2 col-sm-10">
+                                                    <button type="button" class="btn btn-danger">Eliminar cuenta
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.tab-pane -->
+                                </div>
+                                <!-- /.tab-content -->
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+    </div>
 {% endblock %}

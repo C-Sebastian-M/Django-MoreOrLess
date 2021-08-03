@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Agregamos herencia, apps y urls" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Agregamos herencia, apps y urls">
+      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gastos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/informes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/informes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/metas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/perfil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/presupuesto.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +39,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />

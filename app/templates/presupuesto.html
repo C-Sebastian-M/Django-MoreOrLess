@@ -1,181 +1,183 @@
-{%  extends 'body.html' %}
+{% extends 'body.html' %}
 {% load static %}
 {% block content %}
-<div class="content-wrapper">
-    <div class="content-header">
-      <div class="container">
-      <div class="container-fluid">
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container">
+                <div class="container-fluid">
 
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Presupuesto</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="presupuesto.html">Presupuesto</a></li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Presupuesto</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="presupuesto.html">Presupuesto</a></li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+        </div>
+        <!-- Aqui va toda la info del main -->
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-12 col-sm-12 col-lg-6">
+                        <!-- general form elements -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Ingresar presupuesto</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <form>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Fecha</label>
+                                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input"
+                                                   data-target="#reservationdate">
+                                            <div class="input-group-append" data-target="#reservationdate"
+                                                 data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label for="inputStatus">Categorias</label>
+                                    <div class="form-group">
+                                        <select id="inputStatus" class="form-control custom-select col-12 col-sm-6">
+                                            <option disabled="" selected>Seleccione una categoria</option>
+                                            <option>Alimento</option>
+                                            <option>Ropa</option>
+                                            <option>Salidas</option>
+                                        </select>
+                                        <div class="btn-group btn-group-sm">
+                                            <a href="#" class="btn btn-info"><i class="far fa-edit"></i></a>
+                                        </div>
+                                    </div>
+                                    <label for="form-control">Monto</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="form-control">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Ingresar presupuesto</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Presupuestos registrados</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body table-responsive p-0" style="height: 300px;">
+                                <table class="table table-head-fixed text-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>Categoria</th>
+                                        <th>Cantidad</th>
+                                        <th>Fecha</th>
+                                        <th>Editar</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Ropa</td>
+                                        <td>$30.000</td>
+                                        <td>17/06/2021</td>
+                                        <td>
+                                            <a href="#"><i class="fas fa-edit"></i></a>
+                                            <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer clearfix">
+                                <ul class="pagination pagination-sm m-0 float-right">
+                                    <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- ./left column -->
+                    <div class="col-12 col-sm-12 col-lg-6"> <!--col right-->
+                        <div class="card card-primary card-outline">
+                            <div class="card-body">
+                                <!-- small box -->
+                                <div class="col-12 col-sm-12 col-lg-12">
+                                    <div class="small-box bg-info">
+                                        <div class="inner">
+                                            <h2>Ingresos mensuales</h2>
+                                            <p>$0.00</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- smell -->
+                                <div class="col-12 col-sm-12 col-lg-12">
+                                    <!-- small box -->
+                                    <div class="small-box bg-success">
+                                        <div class="inner">
+                                            <h2>Gastos mensuales</h2>
+
+                                            <p>$0.00</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-hand-holding-usd"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-lg-12">
+                                    <!-- small box -->
+                                    <div class="small-box bg-warning">
+                                        <div class="inner">
+                                            <h2>Saldo actual</h2>
+
+                                            <p>$0.00</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-wallet"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- small box -->
+                                <div class="col-12 col-sm-12 col-lg-12">
+                                    <div class="small-box bg-danger">
+                                        <div class="inner">
+                                            <h2>Presupuesto restante</h2>
+
+                                            <p>$0.00</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-file-invoice-dollar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--./col right-->
+                </div><!-- ./row -->
+            </div>
+        </section>
     </div>
-    </div>
-    <!-- Aqui va toda la info del main -->
-    <section class="content">
-      <div class="container">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-12 col-sm-12 col-lg-6">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Ingresar presupuesto</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label>Fecha</label>
-                      <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                          <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate">
-                          <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                          </div>
-                      </div>
-                  </div>
-                  <label for="inputStatus">Categorias</label>
-                  <div class="form-group">
-                    <select id="inputStatus" class="form-control custom-select col-12 col-sm-6">
-                      <option disabled="" selected>Seleccione una categoria</option>
-                      <option>Alimento</option>
-                      <option>Ropa</option>
-                      <option>Salidas</option>
-                    </select>
-                    <div class="btn-group btn-group-sm">
-                      <a href="#" class="btn btn-info"><i class="far fa-edit"></i></a>
-                    </div>
-                  </div>
-                  <label for="form-control">Monto</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">$</span>
-                    </div>
-                    <input type="text" class="form-control" id="form-control">
-                    <div class="input-group-append">
-                      <span class="input-group-text">.00</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Ingresar presupuesto</button>
-                </div>
-              </form>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Presupuestos registrados</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
-                <table class="table table-head-fixed text-nowrap">
-                  <thead>
-                    <tr>
-                      <th>Categoria</th>
-                      <th>Cantidad</th>
-                      <th>Fecha</th>
-                      <th>Editar</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Ropa</td>
-                      <td>$30.000</td>
-                      <td>17/06/2021</td>
-                      <td>
-                        <a href="#"><i class="fas fa-edit"></i></a>
-                        <a href="#"><i class="fas fa-trash-alt"></i></a>
-                      </td>
-                    </tr>
-
-
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer clearfix">
-                <ul class="pagination pagination-sm m-0 float-right">
-                  <li class="page-item"><a class="page-link" href="#">«</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">»</a></li>
-                </ul>
-              </div>
-            </div>
-          </div><!-- ./left column -->
-          <div class="col-12 col-sm-12 col-lg-6"> <!--col right-->
-            <div class="card card-primary card-outline">
-              <div class="card-body">
-                 <!-- small box -->
-                <div class="col-12 col-sm-12 col-lg-12">
-                  <div class="small-box bg-info">
-                    <div class="inner">
-                      <h2>Ingresos mensuales</h2>
-                      <p>$0.00</p>
-                    </div>
-                    <div class="icon">
-                      <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                  </div>
-                </div>
-                <!-- smell -->
-                <div class="col-12 col-sm-12 col-lg-12">
-                  <!-- small box -->
-                  <div class="small-box bg-success">
-                    <div class="inner">
-                      <h2>Gastos mensuales</h2>
-
-                      <p>$0.00</p>
-                    </div>
-                    <div class="icon">
-                      <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-sm-12 col-lg-12">
-                  <!-- small box -->
-                  <div class="small-box bg-warning">
-                    <div class="inner">
-                      <h2>Saldo actual</h2>
-
-                      <p>$0.00</p>
-                    </div>
-                    <div class="icon">
-                      <i class="fas fa-wallet"></i>
-                    </div>
-                  </div>
-                </div>
-                  <!-- small box -->
-                  <div class="col-12 col-sm-12 col-lg-12">
-                  <div class="small-box bg-danger">
-                    <div class="inner">
-                      <h2>Presupuesto restante</h2>
-
-                      <p>$0.00</p>
-                    </div>
-                    <div class="icon">
-                      <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!--./col right-->
-        </div><!-- ./row -->
-      </div>
-    </section>
-  </div>
 {% endblock %}
