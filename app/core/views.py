@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-def inicio(request):
-    return render(request, 'informes.html')
+
+class DashboardView(TemplateView):
+    template_name = 'presupuesto.html'
 

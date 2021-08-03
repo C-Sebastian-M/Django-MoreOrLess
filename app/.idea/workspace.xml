@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Agregamos modelos, urls">
-      <change afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Agregamos herencia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gastos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/informes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/informes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/metas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/perfil.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/presupuesto.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +97,9 @@
       <workItem from="1625695435414" duration="596000" />
       <workItem from="1625756730882" duration="854000" />
       <workItem from="1625782435178" duration="588000" />
-      <workItem from="1627409233824" duration="8680000" />
+      <workItem from="1627409233824" duration="9402000" />
+      <workItem from="1627591188752" duration="4004000" />
+      <workItem from="1628013905577" duration="1956000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -112,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625756983945</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Agregamos herencia">
+      <created>1627434103004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1627434103004</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,18 +172,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Agregamos modelos, urls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregamos modelos, urls" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/body.html</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Agregamos herencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregamos herencia" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1625268925899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

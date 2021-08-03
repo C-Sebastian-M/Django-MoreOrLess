@@ -23,6 +23,11 @@ class presupuesto(models.Model):
 
     def __str__(self):
         return self.date
+    class Meta:
+        verbose_name = 'Presupuesto'
+        verbose_name_plural = 'Presupuestos'
+        db_table = 'presupuesto'
+        ordering = ['id']
 
 
 class gastos(models.Model):
@@ -32,6 +37,11 @@ class gastos(models.Model):
 
     def __str__(self):
         return self.date
+    class Meta:
+        verbose_name = 'Gasto'
+        verbose_name_plural = 'Gastos'
+        db_table = 'gasto'
+        ordering = ['id']
 
 
 class metas(models.Model):
@@ -41,6 +51,10 @@ class metas(models.Model):
 
     def __str__(self):
         return self.f_c_m
-
+    class Meta:
+        verbose_name = 'Meta'
+        verbose_name_plural = 'Metas'
+        db_table = 'meta'
+        ordering = ['id']
 
 # Create your models here.
