@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Agregamos herencia, apps y urls">
-      <change afterPath="$PROJECT_DIR$/core/gastos/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/metas/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gastos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Agregamos herencia, apps y urls" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +20,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1umMFzdlSKrlhjbTDprrdZy9ORW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -103,7 +94,7 @@
       <workItem from="1627591188752" duration="4004000" />
       <workItem from="1628013905577" duration="7298000" />
       <workItem from="1628023362247" duration="29000" />
-      <workItem from="1628023394305" duration="4398000" />
+      <workItem from="1628023394305" duration="4777000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -147,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628025307432</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Agregamos herencia, apps y urls">
+      <created>1628027925058</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628027925058</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
