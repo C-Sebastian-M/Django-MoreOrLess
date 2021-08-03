@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name="index"),
     path('presupuesto/', include('core.presupuesto.urls')),
+    path('metas/', include('core.metas.urls')),
+    path('gastos/', include('core.gastos.urls')),
 ]

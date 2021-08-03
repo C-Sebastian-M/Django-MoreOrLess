@@ -1,7 +1,7 @@
 {% load static %}
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="index.html" class="navbar-brand">
+      <a href="{% url "index" %}" class="navbar-brand">
         <img src="{% static 'img/logo3.png' %}" alt="More_or_less Logo" class="brand-image">
         <span class="brand-text font-weight-light">More or less</span>
       </a>
@@ -17,7 +17,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="{% url "index" %}" class="nav-link">Inicio</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Contactenos</a>
@@ -110,7 +110,7 @@
                  <li class="nav-header">Modulos</li>
 
                  <li class="nav-item">
-                  <a href="index.html" class="nav-link">
+                  <a href="{% url "index" %}" class="nav-link">
                     <i class="nav-icon far fas fa-home"></i>
                     <p>
                       Inicio
@@ -118,7 +118,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="presupuesto.html" class="nav-link">
+                  <a href="{% url "presupuesto" %}" class="nav-link">
                     <i class="nav-icon fas fa-dollar-sign"></i>
                     <p>
                       Presupuesto
@@ -126,7 +126,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="metas.html" class="nav-link">
+                  <a href="{% url "metas" %}" class="nav-link">
                     <i class="nav-icon fas fa-search-dollar"></i>
                     <p>
                       Metas
@@ -134,7 +134,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="gastos.html" class="nav-link">
+                  <a href="{% url "gastos" %}" class="nav-link">
                     <i class="nav-icon fas fa-money-bill-wave"></i>
                     <p>
                       Gastos
