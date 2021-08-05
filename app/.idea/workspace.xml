@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Organice y agregue herencia en listas, apps y urls">
+      <change afterPath="$PROJECT_DIR$/core/informes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -60,9 +78,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\core" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\core\presupuesto" />
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\core" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\django\app\requerimientos" />
     </key>
   </component>
@@ -114,6 +132,7 @@
       <workItem from="1628023362247" duration="29000" />
       <workItem from="1628023394305" duration="4777000" />
       <workItem from="1628180821393" duration="968000" />
+      <workItem from="1628205201985" duration="998000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -178,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628204945993</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Organice y agregue herencia en listas, apps y urls">
+      <created>1628205317688</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628205317689</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +215,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
         <entry key="f3e1a477-69c5-432e-8e30-13889f9d5831">

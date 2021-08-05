@@ -24,4 +24,6 @@ urlpatterns = [
     path('', include('core.presupuesto.urls')),
     path('', include('core.metas.urls')),
     path('', include('core.gastos.urls')),
+    path('', include('core.informes.urls')),
+    path('', include('core.perfil.urls')),
 ]
