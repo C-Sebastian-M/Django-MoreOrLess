@@ -21,7 +21,7 @@ from core.views import IndexView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name="index"),
-    path('presupuesto/', include('core.presupuesto.urls')),
-    path('metas/', include('core.metas.urls')),
-    path('gastos/', include('core.gastos.urls')),
+    path('', include('core.presupuesto.urls')),
+    path('', include('core.metas.urls')),
+    path('', include('core.gastos.urls')),
 ]

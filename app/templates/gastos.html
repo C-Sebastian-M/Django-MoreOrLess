@@ -73,48 +73,8 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Gastos registrados</h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                                <table class="table table-bordered">
-                                    <thead>
-                                    <tr>
-                                        <th style="width: 10px; padding: 3px;">Categoria</th>
-                                        <th style="padding: 3px;">Cantidad</th>
-                                        <th style="padding: 3px;">Fecha</th>
-                                        <th style="width: 40px; padding: 3px;">Editar</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td style="padding: 3px;">Ropa</td>
-                                        <td style="padding: 3px;">$30.000</td>
-                                        <td style="padding: 3px;">
-                                            17/06/2021
-                                        </td>
-                                        <td style="padding: 3px;">
-                                            <a href="#"><i class="fas fa-edit"></i></a>
-                                            <a href="#"><i class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer clearfix">
-                                <ul class="pagination pagination-sm m-0 float-right">
-                                    <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div><!-- ./left column -->
+                        {% include 'list_gastos.html' %}
+                    </div>
                     <div class="col-md-6">
                         <div class="card card-info">
                             <div class="card-header">

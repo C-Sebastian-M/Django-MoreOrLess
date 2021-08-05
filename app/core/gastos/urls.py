@@ -3,5 +3,5 @@ from core.gastos.views import GastosListView
 
 
 urlpatterns = [
-    path('', GastosListView.as_view(), name='gastos'),
+    path('gastos/', GastosListView.as_view(), name='gastos'),
 ]

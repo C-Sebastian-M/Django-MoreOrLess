@@ -75,47 +75,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Presupuestos registrados</h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body table-responsive p-0" style="height: 300px;">
-                                <table class="table table-head-fixed text-nowrap">
-                                    <thead>
-                                    <tr>
-                                        <th>Categoria</th>
-                                        <th>Cantidad</th>
-                                        <th>Fecha</th>
-                                        <th>Editar</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Ropa</td>
-                                        <td>$30.000</td>
-                                        <td>17/06/2021</td>
-                                        <td>
-                                            <a href="#"><i class="fas fa-edit"></i></a>
-                                            <a href="#"><i class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer clearfix">
-                                <ul class="pagination pagination-sm m-0 float-right">
-                                    <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        {% include 'list_presupuesto.html' %}
                     </div><!-- ./left column -->
                     <div class="col-12 col-sm-12 col-lg-6"> <!--col right-->
                         <div class="card card-primary card-outline">
