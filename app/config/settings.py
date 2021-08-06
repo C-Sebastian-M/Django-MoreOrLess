@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     # APPS
     'core',
     'core.presupuesto',
+    'core.metas',
+    'core.gastos',
+    'core.perfil',
+    'core.informes',
 ]
 
 MIDDLEWARE = [
