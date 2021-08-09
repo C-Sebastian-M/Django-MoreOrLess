@@ -4,7 +4,7 @@ from datetime import datetime
 class User(models.Model):
     names = models.CharField(max_length=20, verbose_name='Nombres')
     last_names = models.CharField(max_length=20, verbose_name='Apellido')
-    date_joined = models.DateField(default=datetime.now(), verbose_name='Fecha de registro')
+    date_joined = models.DateField(default=datetime.now, verbose_name='Fecha de registro')
     avatar = models.ImageField(upload_to='avatar/%y/%m/d', null=True, blank=True)
 
     def __str__(self):

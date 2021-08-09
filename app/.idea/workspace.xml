@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Organice y agregue herencia en listas, apps y urls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gastos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/list_gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list_gastos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/list_presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list_presupuesto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/presupuesto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +79,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="config.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\django\env\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\estef\Documents\more or less\horus\env\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
