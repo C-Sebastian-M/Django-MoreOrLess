@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Organice y agregue herencia en listas, apps y urls" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Organice y agregue herencia en listas, apps y urls">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gastos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list_gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list_gastos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list_presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list_presupuesto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/presupuesto.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
       <GitPushTagMode>
@@ -31,7 +42,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1umMFzdlSKrlhjbTDprrdZy9ORW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -49,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../env" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -58,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\templates\listas" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\core" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\core\presupuesto" />
@@ -73,7 +84,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="config.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\project\django\env\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\django\env\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -113,7 +124,7 @@
       <workItem from="1628023394305" duration="4777000" />
       <workItem from="1628180821393" duration="968000" />
       <workItem from="1628205201985" duration="998000" />
-      <workItem from="1628207825711" duration="116000" />
+      <workItem from="1628543540189" duration="1728000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -202,7 +213,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
