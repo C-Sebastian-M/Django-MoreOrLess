@@ -26,4 +26,5 @@ urlpatterns = [
     path('', include('core.gastos.urls')),
     path('', include('core.informes.urls')),
     path('', include('core.perfil.urls')),
+    path('', include('core.categorias.urls')),
 ]

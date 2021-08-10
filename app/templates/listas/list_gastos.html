@@ -8,8 +8,9 @@
     </tr>
 {% endblock %}
 {% block rows %}
-    <tr>
-        {% for c in object_list %}
+
+    {% for c in object_list %}
+        <tr>
             <td>{{ c.category }}</td>
             <td>{{ c.amount }}</td>
             <td>{{ c.date }}</td>
@@ -20,6 +21,6 @@
                         class="fas fa-trash-alt"></i>
                 </button>
             </td>
-        {% endfor %}
-    </tr>
+        </tr>
+    {% endfor %}
 {% endblock %}

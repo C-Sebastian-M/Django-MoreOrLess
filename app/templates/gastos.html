@@ -11,7 +11,7 @@
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="{% url 'gastos' %}}">Gastos</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'add' %}}">Gastos</a></li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -23,71 +23,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-lg-6">
-                        <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Ingresar gastos</h3>
+                                <h5 class="text-center">¡Dale click en este boton para ingresar un nuevo gasto!</h5>
+                                <a href="{% url 'add' %}">
+                                    <button type="button" class="btn btn-outline-light btn-block btn-sm"><i
+                                            class="fa fa-plus"></i> INGRESAR GASTO
+                                    </button>
+                                </a>
                             </div>
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <form>
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label>Fecha</label>
-                                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input"
-                                                   data-target="#reservationdate">
-                                            <div class="input-group-append" data-target="#reservationdate"
-                                                 data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <label for="inputStatus">Categorias</label>
-                                    <div class="form-group">
-                                        <select id="inputStatus" class="form-control custom-select col-12 col-sm-6">
-                                            <option disabled="" selected>Seleccione una categoria</option>
-                                            <option>Alimento</option>
-                                            <option>Ropa</option>
-                                            <option>Salidas</option>
-                                        </select>
-                                        <div class="btn-group btn-group-sm">
-                                            <a href="#" class="btn btn-info"><i class="far fa-edit"></i></a>
-                                        </div>
-                                    </div>
-                                    <label for="form-control">Monto</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">$</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="form-control">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Ingresar gastos</button>
-                                </div>
-                            </form>
                         </div>
-                        {% include 'listas/list_gastos.html' %}
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card card-info">
+                        <div class="card card-dark">
                             <div class="card-header">
                                 <h3 class="card-title">Grafico de gastos</h3>
-
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </div>
                             </div>
                             <div class="card-body">
                                 <figure>
@@ -95,7 +43,9 @@
                                 </figure>
                             </div>
                         </div>
-                        <!-- /.card-body -->
+                    </div>
+                    <div class="col-md-6">
+                        {% include 'listas/list_gastos.html' %}
                     </div>
                 </div>
             </div>

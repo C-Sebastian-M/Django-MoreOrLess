@@ -21,60 +21,15 @@
         <section class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card-body" style="padding: 0;">
-                            <div class="tab-content">
-                                <div class="col-12">
-                                    <div class="card card-primary">
-                                        <div class="card-header">
-                                            <h3 class="card-title">Ingresar meta de ahorro</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <!-- Date -->
-                                            <div class="form-group">
-                                                <label>Fecha en la que deseas cumplir tu meta</label>
-                                                <div class="input-group date" id="reservationdate"
-                                                     data-target-input="nearest">
-                                                    <input type="text" class="form-control datetimepicker-input"
-                                                           data-target="#reservationdate">
-                                                    <div class="input-group-append" data-target="#reservationdate"
-                                                         data-toggle="datetimepicker">
-                                                        <div class="input-group-text"><i class="fa fa-calendar"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="inputStatus">Categoria</label>
-                                                <select id="inputStatus" class="form-control custom-select">
-                                                    <option disabled="" selected>Seleccione una categoria</option>
-                                                    <option>Vivienda</option>
-                                                    <option>Estudios</option>
-                                                    <option>Negocio</option>
-                                                </select>
-
-                                            </div>
-
-                                            <label for="form-control">Valor</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">$</span>
-                                                </div>
-                                                <input type="text" class="form-control">
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text">.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /.card-body -->
-
-                                        <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary">Ingresar meta</button>
-                                        </div>
-                                    </div>
-
-                                </div>
+                    <div class="col-12 col-sm-12 col-lg-6">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h5 class="text-center">¡Dale click en este boton para ingresar una meta!</h5>
+                                <a href="{% url 'addMe' %}">
+                                    <button type="button" class="btn btn-outline-light btn-block btn-sm"><i
+                                            class="fa fa-plus"></i> INGRESAR META
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -105,7 +60,6 @@
                     <div class="card col-12">
                         <div class="card-header">
                             <h3 class="card-title">Detalles de la meta</h3>
-                            <div style="text-align: right;"><a href="#"><i class="fas fa-edit"></i></a></div>
                         </div>
                         <!-- /.card-header -->
                         <!-- /.card-body -->
@@ -116,34 +70,37 @@
                                     <tr>
                                         <th>Categoria</th>
                                         <th>Cantidad</th>
-                                        <th>Fecha Inicio</th>
-                                        <th>Fecha Fin</th>
-                                        <th>Acumulado</th>
+                                        <th>Inicio</th>
+                                        <th>Fin</th>
+                                        <th>¿Lo conseguiste?</th>
+                                        <th>Editar</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        {% for c in object_list %}
+                                    {% for c in object_list %}
+                                        <tr>
                                             <td>{{ c.category }}</td>
-                                            <td>$ {{ c.valor }}</td>
+                                            <td>${{ c.amount }}</td>
                                             <td>{{ c.date }}</td>
                                             <td>{{ c.f_c_m }}</td>
                                             <td>
-                                                <div>$ 150.000</div>
-                                                <div class="mfs-auto font-weight-bold" style="text-align: right;">12.5%
-                                                </div>
-                                                <div class="progress progress-xs">
-                                                    <div class="progress-bar bg-warning progress-bar-striped"
-                                                         role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                                         aria-valuemax="100" style="width: 12.5%">
-                                                        <span class="sr-only">60% Complete (warning)</span>
-                                                    </div>
-                                                </div>
+                                                <button type="button" class="btn btn-info btn-xs"><i
+                                                        class="fas fa-check"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-xs"><i
+                                                        class="fas fa-times"></i>
+                                                </button>
                                             </td>
-                                        {% endfor %}
-
-
-                                    </tr>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-xs"><i
+                                                        class="fas fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-xs"><i
+                                                        class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
 
 
                                     </tbody>
@@ -153,12 +110,6 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer clearfix">
-                            <button type="submit" class="btn btn-primary" style="border: none; background: red;">
-                                Eliminar
-                            </button>
-                            <button type="submit" class="btn btn-primary" style="border: none; background: green;">
-                                Modificar
-                            </button>
                             <ul class="pagination pagination-sm m-0 float-right">
                                 <li class="page-item"><a class="page-link" href="#">«</a></li>
                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -170,6 +121,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
 {% endblock %}
