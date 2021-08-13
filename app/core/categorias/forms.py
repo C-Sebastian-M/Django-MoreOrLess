@@ -9,7 +9,7 @@ class CategoriaForm(ModelForm):
         model = Categoria
         fields = '__all__'
         labels = {
-            'category': 'Categoria',
+            'category': 'Nueva categoria',
         }
         widgets = {
             'category': TextInput(

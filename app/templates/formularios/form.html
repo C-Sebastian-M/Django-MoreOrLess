@@ -7,7 +7,7 @@
         <!-- Aqui va toda la info del main -->
         <section class="content">
             <div class="container">
-                <form method="post" action=".">
+                <form method="post" action="." id="form">
                     <div class="card card-outline card-primary">
                         <div class="card-header">
                             <h3 class="card-title">{{ title }}</h3>
@@ -15,19 +15,91 @@
                         <div class="card-body">
                             {% csrf_token %}
                             {% for field in form.visible_fields %}
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">{{ field.label }}:</label>
-                                    {{ field }}
-                                </div>
+                                {% if field.label == 'Categoria' %}
+                                    <div class="form-group">
+                                        <label>{{ field.label }}:</label>
+                                        <div class="input-group date" id="reservationdate"
+                                             data-target-input="nearest">
+                                            {{ field }}
+                                        </div>
+                                    </div>
+                                    <a href={% url 'addCat' %}>
+                                        <button type="button" class="btn btn-outline-primary btn-block"><i
+                                                class="fa fa-plus"></i> Si no tienes una categoria o simplemente
+                                            quieres
+                                            crear una nueva, ¡dale click aqui!
+                                        </button>
+                                    </a>
+                                {% elif field.label == 'Nueva categoria' %}
+                                    <div class="form-group">
+                                        <label>{{ field.label }}:</label>
+                                        <div class="input-group date" id="reservationdate"
+                                             data-target-input="nearest">
+                                            {{ field }}
+                                        </div>
+                                    </div>
+                                    <a href={% url 'categorias' %}>
+                                        <button type="button" class="btn btn-outline-primary btn-block"><i
+                                                class="fa fa-plus"></i> Ver categorias creadas
+                                        </button>
+                                    </a>
+                                {% else %}
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">{{ field.label }}:</label>
+                                        {{ field }}
+                                    </div>
+                                {% endif %}
                             {% endfor %}
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
+                            <button id="submit" type="submit" class="btn btn-primary btnTest"><i
+                                    class="fas fa-save"></i>
+                                Guardar
+                            </button>
                         </div>
                     </div>
                 </form>
+                <script>
+                    {% if form.errors %}
+                        let errors = '';
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                errors += '{{ error }}\n'
+                            {% endfor %}
+                        {% endfor %}
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops... Error!',
+                            text: errors,
+                        })
+                    {% endif %}
+
+                    $('form').on('submit', function (e) {
+                        e.preventDefault();
+                        let parameters = $(this).serializeArray();
+                        $.ajax({
+                            url: window.location.pathname,
+                            type: 'POST',
+                            data: parameters,
+                            dataType: 'json'
+                        }).done(function (data) {
+                            console.log(data);
+                            if (!data.hasOwnProperty('error')) {
+                                location.href = '{{ list_url }}';
+                                return false;
+                            }
+                            message_error(data.error);
+                        }).fail(function (jqXHR, textStatus, errorThrown) {
+                            alert(textStatus + ': ' + errorThrown);
+                        }).always(function (data) {
+
+                        });
+
+                    });
+                </script>
             </div>
         </section>
     </div>
+
 
 {% endblock %}

@@ -16,6 +16,9 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery-3.0.0" level="application" />
+    <orderEntry type="library" name="jquery-migrate-3.3.2" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

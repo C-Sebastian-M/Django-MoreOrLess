@@ -1,4 +1,5 @@
 from django.forms import *
+
 from core.presupuesto.models import Presupuesto
 
 
@@ -18,10 +19,21 @@ class PresupuestoForm(ModelForm):
                     'placeholder': 'Ingrese el monto del presupuesto',
                 }
             ),
-            'category': Select(
+            'category': TextInput(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Categoria',
                 }
             ),
         }
+
+    def save(self, commit=True):
+        data = {}
+        form = super()
+        try:
+            if form.is_valid():
+                form.save()
+            else:
+                data['error']=form.errors
+        except Exception as e:
+            return data

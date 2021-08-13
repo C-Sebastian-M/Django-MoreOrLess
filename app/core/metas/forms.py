@@ -1,6 +1,6 @@
 from django.forms import *
 
-from core.gastos.models import Gastos
+from core.categorias.models import Categoria
 from core.metas.models import Metas
 
 
@@ -9,10 +9,10 @@ class MetasForm(ModelForm):
         model = Metas
         fields = '__all__'
         exclude = ('date',)
-        labels ={
-            'f_c_m':'Fecha en la que deseas cumplir tu meta',
+        labels = {
+            'f_c_m': 'Fecha en la que deseas cumplir tu meta',
             'valor': 'Monto',
-            'category':'Categoria',
+            'category': 'Categoria',
         }
 
         widgets = {
@@ -21,9 +21,9 @@ class MetasForm(ModelForm):
                     'class': 'form-control',
                 }
             ),
-            'category': Select(
+            'category': TextInput(
                 attrs={
-                    'class': 'form-control'
+                    'class': 'form-control select2',
                 }
             ),
             'amount': TextInput(

@@ -1,6 +1,8 @@
 from django.db import models
 from datetime import datetime
 
+# Create your models here.
+
 class User(models.Model):
     names = models.CharField(max_length=20, verbose_name='Nombres')
     last_names = models.CharField(max_length=20, verbose_name='Apellido')
@@ -24,4 +26,4 @@ class User(models.Model):
 
 
 
-# Create your models here.
+

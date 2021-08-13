@@ -1,7 +1,8 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView, UpdateView
 
 from core.categorias.forms import CategoriaForm
 from core.categorias.models import Categoria
@@ -9,6 +10,14 @@ from core.categorias.models import Categoria
 
 # Create your views here.
 
+class CategoriaListView(ListView):
+    model = Categoria
+    template_name = 'categorias.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Categorias creadas'
+        return context
 
 class CategoriaCreateView(CreateView):
     model = Categoria
@@ -16,7 +25,50 @@ class CategoriaCreateView(CreateView):
     template_name = 'formularios/form_categoria.html'
     success_url = reverse_lazy('')
 
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'add':
+                form = self.get_form()
+                data = form.save()
+            else:
+                data['error'] = 'No ha ingresado a ninguna opción'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Registrar categoria'
+        return context
+
+class CategoriaUpdateView(UpdateView):
+    model = Categoria
+    form_class = CategoriaForm
+    template_name = 'formularios/form_categoria.html'
+    success_url = reverse_lazy('')
+
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'edit':
+                form = self.get_form()
+                data = form.save()
+            else:
+                data['error'] = 'No ha ingresado a ninguna opción'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Ingresar gastos'
+        context['action'] = 'edit'
+
         return context

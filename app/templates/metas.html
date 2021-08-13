@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-lg-6">
-                        <div class="card card-primary">
+                        <div class="card card-green">
                             <div class="card-header">
                                 <h5 class="text-center">¡Dale click en este boton para ingresar una meta!</h5>
                                 <a href="{% url 'addMe' %}">
@@ -34,14 +34,14 @@
                         </div>
                     </div>
                     <div class=" col-md-6">
-                        <div class="card card-outline card-primary">
+                        <div class="card card-outline card-green">
                             <div class="card-header">
                                 <h3 class="card-title">Ahorro sugerido</h3>
                             </div>
                             <!-- /.card-header -->
 
                             <div class="card-body">
-                                <div style="text-align: center; color:#007bff;">Para alcanzar tu meta debes ahorrar:
+                                <div class="text-center">Para alcanzar tu meta debes ahorrar:
                                 </div>
                                 <div style="margin: 40px;">
                                     <div style="float:left;">
@@ -73,7 +73,7 @@
                                         <th>Inicio</th>
                                         <th>Fin</th>
                                         <th>¿Lo conseguiste?</th>
-                                        <th>Editar</th>
+                                        <th>Opciones</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -92,9 +92,9 @@
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-info btn-xs"><i
+                                                <a href="{% url 'editMe' %}" class="btn btn-info btn-xs"><i
                                                         class="fas fa-edit"></i>
-                                                </button>
+                                                </a>
                                                 <button type="button" class="btn btn-danger btn-xs"><i
                                                         class="fas fa-trash-alt"></i>
                                                 </button>

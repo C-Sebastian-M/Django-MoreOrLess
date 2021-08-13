@@ -1,57 +1,745 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Organice y agregue herencia en listas, apps y urls">
-      <change afterPath="$PROJECT_DIR$/core/categorias/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/categorias/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0002_alter_gastos_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0003_alter_gastos_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0004_alter_gastos_date.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0005_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0006_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0007_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0008_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0009_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0010_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0011_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0012_alter_gastos_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/metas/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/metas/migrations/0002_auto_20210809_2122.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/metas/migrations/0003_alter_metas_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0006_auto_20210809_1934.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0007_categoria.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/presupuesto/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/presupuesto/migrations/0002_alter_presupuesto_date.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/presupuesto/migrations/0003_alter_presupuesto_amount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formularios/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formularios/form_categoria.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formularios/form_gastos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formularios/form_metas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formularios/form_presupuesto.html" afterDir="false" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Se agregaron formularios con herencia y metodo post, falta arreglar categoria para que funcione en general.">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/presupuesto/migrations/0004_alter_presupuesto_amount.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/FUNDING.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/stale.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/workflows/docs-deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/workflows/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.github/workflows/package-deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.jshintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/.jshintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/Gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/css/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/dsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/hsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/hy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/pa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/sr-Cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/te.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/tk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/i18n/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/select2.full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/dist/js/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/accounts/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/assets/rtfm-screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/config/plugins/anchors.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/config/plugins/highlight.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/config/plugins/simplesearch.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/config/site.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/config/system.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/data/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/localhost/config/security.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/localhost/config/system.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/01.getting-started/01.installation/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/01.getting-started/02.basic-usage/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/01.getting-started/03.builds-and-modules/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/01.getting-started/chapter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/02.troubleshooting/01.getting-help/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/02.troubleshooting/02.common-problems/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/02.troubleshooting/chapter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/03.configuration/01.options-api/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/03.configuration/02.defaults/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/03.configuration/03.data-attributes/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/03.configuration/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/04.appearance/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/05.options/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/06.data-sources/01.formats/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/06.data-sources/02.ajax/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/06.data-sources/03.arrays/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/06.data-sources/chapter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/07.dropdown/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/08.selections/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/09.tagging/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/10.placeholders/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/11.searching/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/12.programmatic-control/01.add-select-clear-items/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/12.programmatic-control/02.retrieving-selections/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/12.programmatic-control/03.methods/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/12.programmatic-control/04.events/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/12.programmatic-control/chapter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/13.i18n/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/01.adapters-and-decorators/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/02.default-adapters/01.selection/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/02.default-adapters/02.array/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/02.default-adapters/03.ajax/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/02.default-adapters/04.data/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/02.default-adapters/05.results/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/02.default-adapters/06.dropdown/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/02.default-adapters/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/14.advanced/chapter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/15.upgrading/01.new-in-40/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/15.upgrading/02.migrating-from-35/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/15.upgrading/chapter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/al.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/az.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/co.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ct.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/de.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/fl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ga.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/hi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/id.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/il.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ky.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/la.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/md.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/me.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/mi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/mn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/mo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ms.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/mt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/nc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/nd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/nh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/nj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/nm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/nv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/oh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ok.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/or.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/pa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ri.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/sc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/sd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/tn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/tx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/ut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/va.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/vt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/wa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/wi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/wv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/flags/wy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/pages/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/anchors/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/anchors/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/anchors/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/anchors/anchors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/anchors/anchors.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/anchors/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/anchors/js/anchor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/assets/readme_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/breadcrumbs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/breadcrumbs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/classes/breadcrumbs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/css/breadcrumbs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/breadcrumbs/templates/partials/breadcrumbs.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/assets/readme_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/cli/LogCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/error.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/languages.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/pages/error.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/templates/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/error/templates/error.json.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/assets/readme_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/agate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/androidstudio.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/arduino-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/arta.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/ascetic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-cave.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-cave.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-dune.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-dune.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-estuary.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-estuary.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-forest.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-forest.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-heath.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-heath.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-lakeside.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-lakeside.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-plateau.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-plateau.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-savanna.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-savanna.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-seaside.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-seaside.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-sulphurpool.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/atelier-sulphurpool.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/brown-paper.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/codepen-embed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/color-brewer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/darkula.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/docco.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/far.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/github-gist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/github.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/googlecode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/grayscale.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/hopscotch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/hybrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/idea.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/ir-black.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/kimbie.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/kimbie.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/learn.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/magula.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/mono-blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/monokai-sublime.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/monokai.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/obsidian.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/paraiso-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/paraiso-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/paraiso.dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/paraiso.light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/pojoaque.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/railscasts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/rainbow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/school-book.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/solarized-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/solarized-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/sunburst.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/tomorrow-night-blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/tomorrow-night-bright.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/tomorrow-night-eighties.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/tomorrow-night.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/tomorrow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/vs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/xcode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/css/zenburn.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/highlight.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/highlight.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/js/highlight.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/highlight/js/highlightjs-line-numbers.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/assets/readme_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/css/problems.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/css/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/html/problems.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/problems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/problems/problems.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/assets/readme_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/assets/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/css/simplesearch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/js/simplesearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/languages.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/pages/simplesearch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/simplesearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/simplesearch.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/templates/partials/simplesearch_base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/templates/partials/simplesearch_item.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/templates/partials/simplesearch_searchbox.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/templates/simplesearch_results.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/plugins/simplesearch/templates/simplesearch_results.json.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/screenshot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/blueprints.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/blueprints/chapter.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/blueprints/docs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css-compiled/nucleus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css-compiled/nucleus.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css-compiled/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css-compiled/theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css/featherlight.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css/nucleus-ie10.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css/nucleus-ie9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/css/pure-0.5.0/grids-min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/images/clippy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/js/clipboard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/js/featherlight.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/js/html5shiv-printshiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/js/jquery.scrollbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/js/learn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/js/modernizr.custom.71422.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/languages.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/learn2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/learn2.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/screenshot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/nucleus/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/nucleus/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/nucleus/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/nucleus/_layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/nucleus/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/nucleus/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/theme/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/theme/_bullets.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/configuration/theme/_colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/_flex.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/functions/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/functions/_direction.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/functions/_range.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/mixins/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/mixins/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/particles/_align-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/nucleus/particles/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_bullets.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_configuration.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_custom.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_scrollbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_tooltips.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/modules/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/theme/modules/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/_bourbon-deprecated-upcoming.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/_bourbon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_directional-values.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_ellipsis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_font-family.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_hide-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_html5-input-types.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_prefixer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_rem.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_retina-image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_size.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_timing-functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_triangle.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/addons/_word-wrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_animation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_appearance.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_backface-visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_background-image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_background.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_border-image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_box-sizing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_calc.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_columns.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_filter.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_flex-box.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_font-face.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_font-feature-settings.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_hidpi-media-query.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_hyphens.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_image-rendering.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_keyframes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_linear-gradient.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_perspective.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_placeholder.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_radial-gradient.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_transform.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/css3/_user-select.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_assign.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_color-lightness.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_flex-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_golden-ratio.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_grid-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_modular-scale.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_px-to-em.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_px-to-rem.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_strip-units.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_tint-shade.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_transition-property-name.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/functions/_unpack.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_convert-units.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_gradient-positions-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_is-num.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_linear-angle-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_linear-gradient-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_linear-positions-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_linear-side-corner-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_radial-arg-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_radial-gradient-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_radial-positions-parser.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_render-gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_shape-size-stripper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/helpers/_str-to-num.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/settings/_prefixer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/bourbon/settings/_px-to-em.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/_color-schemer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_cmyk.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_color-adjustments.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_color-schemer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_colorblind.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_comparison.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_equalize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_harmonize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_interpolation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_mix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_ryb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/scss/vendor/color-schemer/color-schemer/_tint-shade.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/chapter.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/default.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/docs.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/analytics.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/github_link.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/github_note.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/logo.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/metadata.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/page.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/templates/partials/sidebar.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/learn2/thumbnail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/css/s2-docs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/android-chrome-36x36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/android-chrome-48x48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/android-chrome-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/apple-touch-icon-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/apple-touch-icon-60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/apple-touch-icon-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/apple-touch-icon-precomposed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/mstile-310x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/mstile-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/images/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/js/data-fill-from.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/site.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/templates/partials/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/templates/partials/js/source-states.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/templates/partials/logo.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/docs/themes/site/templates/partials/sidebar.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/banner.end.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/banner.start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/jquery.mousewheel.shim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/jquery.select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/jquery.shim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/array.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/maximumInputLength.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/maximumSelectionLength.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/minimumInputLength.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/tags.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/data/tokenizer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/defaults.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/diacritics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/attachBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/attachContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/closeOnSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/dropdownCss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/hidePlaceholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/infiniteScroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/minimumResultsForSearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/selectOnClose.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/stopPropagation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/dropdown/tagsSearchHighlight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/dsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/hsb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/hy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/pa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/sr-Cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/te.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/tk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/i18n/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/keys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/results.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/allowClear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/clickMask.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/eventRelay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/multiple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/selectionCss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/single.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/selection/stopPropagation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/translation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/select2/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/wrapper.end.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/js/wrapper.start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/_multiple.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/_single.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/theme/classic/_defaults.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/theme/classic/_multiple.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/theme/classic/_single.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/theme/classic/layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/theme/default/_multiple.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/theme/default/_single.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/src/scss/theme/default/layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/a11y/selection-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/array-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/base-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/maximumInputLength-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/maximumSelectionLength-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/minimumInputLength-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/select-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/tags-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/data/tokenizer-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/dropdown/dropdownCss-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/dropdown/dropdownParent-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/dropdown/positioning-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/dropdown/search-a11y-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/dropdown/search-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/dropdown/selectOnClose-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/dropdown/stopPropagation-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/integration-jq1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/integration-jq2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/integration-jq3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/integration/dom-changes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/integration/jquery-calls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/integration/select2-methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/options/ajax-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/options/data-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/options/element-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/options/translation-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/options/width-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/results/a11y-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/results/focusing-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/results/infiniteScroll-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/results/option-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/allowClear-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/focusing-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/multiple-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/openOnKeyDown-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/placeholder-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/search-a11y-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/search-placeholder-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/search-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/selectionCss-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/single-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/selection/stopPropagation-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/unit-jq1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/unit-jq2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/unit-jq3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/utils/data-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/utils/decorator-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/utils/escapeMarkup-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/vendor/jquery-1.12.4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/vendor/jquery-2.2.4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/vendor/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/vendor/qunit-1.23.1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/select2-4.1.0-rc.0/tests/vendor/qunit-1.23.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/bootstrap-4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/bootstrap-4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/bootstrap-4.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/sweetalert2.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/sweetalert2.all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/sweetalert2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/sweetalert2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/sweetalert2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/sweetalert2-9.10.0/sweetalert2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/categorias.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/listas/list_categorias.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/gastos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/gastos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/metas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/metas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0007_categoria.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/presupuesto/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/presupuesto/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/presupuesto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formularios/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formularios/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formularios/form_categoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formularios/form_categoria.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gastos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/listas/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/listas/list_gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list_gastos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/listas/list_presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listas/list_presupuesto.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/metas.html" afterDir="false" />
@@ -115,9 +803,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\core" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\templates\listas" />
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\app\core\presupuesto" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\django\app\requerimientos" />
     </key>
@@ -172,7 +860,10 @@
       <workItem from="1628180821393" duration="968000" />
       <workItem from="1628205201985" duration="998000" />
       <workItem from="1628543540189" duration="1728000" />
-      <workItem from="1628608637433" duration="4074000" />
+      <workItem from="1628608637433" duration="5042000" />
+      <workItem from="1628618595286" duration="10364000" />
+      <workItem from="1628792543178" duration="12701000" />
+      <workItem from="1628811931638" duration="5663000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -244,7 +935,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628205317689</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Se agregaron formularios con herencia y metodo post, falta arreglar categoria para que funcione en general.">
+      <created>1628613069371</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628613069371</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +1004,19 @@
     <MESSAGE value="Agregamos herencia, apps y urls" />
     <MESSAGE value="Organice y agregue herencia, apps y urls" />
     <MESSAGE value="Organice y agregue herencia en listas, apps y urls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Organice y agregue herencia en listas, apps y urls" />
+    <MESSAGE value="Se agregaron formularios con herencia y metodo post, falta arreglar categoria para que funcione en general." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregaron formularios con herencia y metodo post, falta arreglar categoria para que funcione en general." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1625268925899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

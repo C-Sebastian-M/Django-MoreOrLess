@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'core.gastos',
     'core.perfil',
     'core.informes',
+    'core.categorias',
     #Libs
     'widget_tweaks'
 ]

@@ -15,8 +15,8 @@
             <td>{{ c.amount }}</td>
             <td>{{ c.date }}</td>
             <td>
-                <button type="button" class="btn btn-info btn-xs"><i class="fas fa-edit"></i>
-                </button>
+                <a href="{% url 'editGast' c.id %}" class="btn btn-info btn-xs"><i class="fas fa-edit"></i>
+                </a>
                 <button type="button" class="btn btn-danger btn-xs"><i
                         class="fas fa-trash-alt"></i>
                 </button>

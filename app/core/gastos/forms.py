@@ -1,6 +1,9 @@
 from django.forms import *
 
-from core.gastos.models import Gastos
+from core.categorias.models import Categoria
+from core.gastos.models import *
+
+
 
 
 class GastosForm(ModelForm):
@@ -20,7 +23,7 @@ class GastosForm(ModelForm):
                     'placeholder': 'Ingrese el monto del gasto',
                 }
             ),
-            'category': Select(
+            'category': TextInput(
                 attrs={
                     'class': 'form-control'
                 }
