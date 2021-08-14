@@ -1,3 +1,5 @@
+
+
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -22,7 +24,7 @@ class CategoriaListView(ListView):
 class CategoriaCreateView(CreateView):
     model = Categoria
     form_class = CategoriaForm
-    template_name = 'formularios/form_categoria.html'
+    template_name = 'form_categoria.html'
     success_url = reverse_lazy('')
 
     def post(self, request, *args, **kwargs):
@@ -41,12 +43,14 @@ class CategoriaCreateView(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Registrar categoria'
+        context['list_url'] = reverse_lazy('categorias')
+        context['action'] = 'add'
         return context
 
 class CategoriaUpdateView(UpdateView):
     model = Categoria
     form_class = CategoriaForm
-    template_name = 'formularios/form_categoria.html'
+    template_name = 'form_categoria.html'
     success_url = reverse_lazy('')
 
     def dispatch(self, request, *args, **kwargs):
@@ -68,7 +72,8 @@ class CategoriaUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Ingresar gastos'
+        context['title'] = 'Editar categoria'
+        context['list_url'] = reverse_lazy('categorias')
         context['action'] = 'edit'
 
         return context

@@ -20,7 +20,7 @@ class GastosListView(ListView):
 class GastosCreateView(CreateView):
     model = Gastos
     form_class = GastosForm
-    template_name = 'formularios/form_gastos.html'
+    template_name = 'form_gastos.html'
     success_url = reverse_lazy('gastos')
 
     def post(self, request, *args, **kwargs):
@@ -31,7 +31,7 @@ class GastosCreateView(CreateView):
                 form = self.get_form()
                 data = form.save()
             else:
-                data['error'] = 'No ha ingresado a ninguna opción'
+                data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
             data['error'] = str(e)
         return JsonResponse(data)
@@ -40,12 +40,14 @@ class GastosCreateView(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Ingresar gastos'
+        context['list_url'] = reverse_lazy('gastos')
+        context['action'] = 'add'
         return context
 
 class GastosUpdateView(UpdateView):
     model = Gastos
     form_class = GastosForm
-    template_name = 'formularios/form_gastos.html'
+    template_name = 'form_gastos.html'
     success_url = reverse_lazy('gastos')
 
     def dispatch(self, request, *args, **kwargs):
@@ -68,7 +70,7 @@ class GastosUpdateView(UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Editar gastos'
+        context['list_url'] = reverse_lazy('gastos')
         context['action'] = 'edit'
-
         return context
 

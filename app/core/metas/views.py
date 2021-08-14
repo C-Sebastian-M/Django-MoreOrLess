@@ -19,7 +19,7 @@ class MetasListView(ListView):
 class MetasCreateView(CreateView):
     model = Metas
     form_class = MetasForm
-    template_name = 'formularios/form_metas.html'
+    template_name = 'form_metas.html'
     success_url = reverse_lazy('metas')
 
     def post(self, request, *args, **kwargs):
@@ -30,7 +30,7 @@ class MetasCreateView(CreateView):
                 form = self.get_form()
                 data = form.save()
             else:
-                data['error'] = 'No ha ingresado a ninguna opción'
+                data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
             data['error'] = str(e)
         return JsonResponse(data)
@@ -38,14 +38,20 @@ class MetasCreateView(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Ingresar meta'
+        context['list_url'] = reverse_lazy('metas')
+        context['action'] = 'add'
         return context
 
 
 class MetasUpdateView(UpdateView):
     model = Metas
     form_class = MetasForm
-    template_name = 'formularios/form_metas.html'
+    template_name = 'form_metas.html'
     success_url = reverse_lazy('metas')
+
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         data = {}
@@ -63,6 +69,7 @@ class MetasUpdateView(UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Editar categoria'
+        context['list_url'] = reverse_lazy('metas')
         context['action'] = 'edit'
 
         return context

@@ -15,24 +15,23 @@ class PresupuestoListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Pesupuestos registrados'
-        #context['index_url'] = reverse_lazy('index')
         return context
 
 class PresupuestoCreateView(CreateView):
     model = Presupuesto
     form_class = PresupuestoForm
-    template_name = 'formularios/form_presupuesto.html'
+    template_name = 'form_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
 
     def post(self, request, *args, **kwargs):
         data = {}
         try:
             action = request.POST['action']
-            if (action == 'add'):
+            if action == 'add':
                 form = self.get_form()
                 data = form.save()
             else:
-                data['error'] = 'No ha ingresado a ninguna opción'
+                data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
             data['error'] = str(e)
         return JsonResponse(data)
@@ -48,7 +47,7 @@ class PresupuestoCreateView(CreateView):
 class PresupuestoUpdateView(UpdateView):
     model = Presupuesto
     form_class = PresupuestoForm
-    template_name = 'formularios/form_presupuesto.html'
+    template_name = 'form_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
 
     def dispatch(self, request, *args, **kwargs):
@@ -63,7 +62,7 @@ class PresupuestoUpdateView(UpdateView):
                 form = self.get_form()
                 data = form.save()
             else:
-                data['error'] = 'No ha ingresado a ninguna opción'
+                data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
             data['error'] = str(e)
         return JsonResponse(data)

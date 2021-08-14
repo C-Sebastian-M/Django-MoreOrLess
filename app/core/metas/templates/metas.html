@@ -1,0 +1,128 @@
+{% extends 'body.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Metas</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="metas.html">Metas</a></li>
+                        </ol>
+
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- Aqui va toda la info del main -->
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-6">
+                        <div class="card card-green">
+                            <div class="card-header">
+                                <h5 class="text-center">¡Dale click en este boton para ingresar una meta!</h5>
+                                <a href="{% url 'addMe' %}">
+                                    <button type="button" class="btn btn-outline-light btn-block btn-sm"><i
+                                            class="fa fa-plus"></i> INGRESAR META
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6">
+                        <div class="card card-outline card-green">
+                            <div class="card-header">
+                                <h3 class="card-title">Ahorro sugerido</h3>
+                            </div>
+                            <!-- /.card-header -->
+
+                            <div class="card-body">
+                                <div class="text-center">Para alcanzar tu meta debes ahorrar:
+                                </div>
+                                <div style="margin: 40px;">
+                                    <div style="float:left;">
+                                        <h5><b>$ 6,603.77</b></h5>
+                                        <p style="padding-left:20px;">por día</p>
+                                    </div>
+                                    <div style="float: right;">
+                                        <h5><b>$ 15151</b></h5>
+                                        <p style="padding-left:30px;">por mes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                    <div class="card col-12">
+                        <div class="card-header">
+                            <h3 class="card-title">Detalles de la meta</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- /.card-body -->
+                        <div class="card-body">
+                            <div class="card-body table-responsive p-0">
+                                <table class="table table-head-fixed text-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>Categoria</th>
+                                        <th>Cantidad</th>
+                                        <th>Inicio</th>
+                                        <th>Fin</th>
+                                        <th>¿Lo conseguiste?</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for c in object_list %}
+                                        <tr>
+                                            <td>{{ c.category }}</td>
+                                            <td>${{ c.amount }}</td>
+                                            <td>{{ c.date }}</td>
+                                            <td>{{ c.f_c_m }}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-xs"><i
+                                                        class="fas fa-check"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-xs"><i
+                                                        class="fas fa-times"></i>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <a href="{% url 'editMe' c.id %}" class="btn btn-info btn-xs"><i
+                                                        class="fas fa-edit"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-danger btn-xs"><i
+                                                        class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer clearfix">
+                            <ul class="pagination pagination-sm m-0 float-right">
+                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+{% endblock %}

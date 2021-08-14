@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\Django-MoreOrLess\env"
+VIRTUAL_ENV="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -1,0 +1,54 @@
+{% extends 'body.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Gastos</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="{% url 'add' %}}">Gastos</a></li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+        </div>
+        <!-- Aqui va toda la info del main -->
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-6">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h5 class="text-center">¡Dale click en este boton para ingresar un nuevo gasto!</h5>
+                                <a href="{% url 'add' %}">
+                                    <button type="button" class="btn btn-outline-light btn-block btn-sm"><i
+                                            class="fa fa-plus"></i> INGRESAR GASTO
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Grafico de gastos</h3>
+                            </div>
+                            <div class="card-body">
+                                <figure>
+                                    <img src={% static 'img/graphic.png' %} alt="grafico" style="max-width: 100%;">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        {% include 'list_gastos.html' %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
