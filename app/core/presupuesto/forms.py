@@ -34,6 +34,7 @@ class PresupuestoForm(ModelForm):
             if form.is_valid():
                 form.save()
             else:
-                data['error']=form.errors
+                data['error'] = form.errors
         except Exception as e:
-            return data
+            data['error'] = str(e)
+        return data
