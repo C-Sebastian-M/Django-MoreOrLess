@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, UpdateView
+from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 
 from core.categorias.forms import CategoriaForm
 from core.categorias.models import Categoria
@@ -76,4 +76,27 @@ class CategoriaUpdateView(UpdateView):
         context['list_url'] = reverse_lazy('categorias')
         context['action'] = 'edit'
 
+        return context
+
+class CategoriaDeleteView(DeleteView):
+    model = Categoria
+    template_name = 'delete_categoria.html'
+    success_url = reverse_lazy('categorias')
+
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            self.object.delete()
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Eliminar categoria'
+        context['list_url'] = reverse_lazy('categorias')
         return context

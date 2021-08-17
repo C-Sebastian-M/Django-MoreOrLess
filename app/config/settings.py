@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'core.perfil',
     'core.informes',
     'core.categorias',
+    'core.login',
     #Libs
     'widget_tweaks'
 ]
@@ -140,3 +141,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
+LOGIN_REDIRECT_URL = 'index'

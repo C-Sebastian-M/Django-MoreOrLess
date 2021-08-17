@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.gastos.forms import GastosForm
 from core.gastos.models import Gastos
 
@@ -72,5 +72,28 @@ class GastosUpdateView(UpdateView):
         context['title'] = 'Editar gastos'
         context['list_url'] = reverse_lazy('gastos')
         context['action'] = 'edit'
+        return context
+
+class GastosDeleteView(DeleteView):
+    model = Gastos
+    template_name = 'delete_gastos.html'
+    success_url = reverse_lazy('gastos')
+
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            self.object.delete()
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Eliminar gasto'
+        context['list_url'] = reverse_lazy('gastos')
         return context
 

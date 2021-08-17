@@ -10,7 +10,7 @@
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="metas.html">Metas</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'metas' %}">Metas</a></li>
                         </ol>
 
                     </div><!-- /.col -->
@@ -95,9 +95,9 @@
                                                 <a href="{% url 'editMe' c.id %}" class="btn btn-info btn-xs"><i
                                                         class="fas fa-edit"></i>
                                                 </a>
-                                                <button type="button" class="btn btn-danger btn-xs"><i
+                                                <a href="{% url 'deleteMe' c.id %}" class="btn btn-danger btn-xs"><i
                                                         class="fas fa-trash-alt"></i>
-                                                </button>
+                                                </a>
                                             </td>
                                         </tr>
                                     {% endfor %}
