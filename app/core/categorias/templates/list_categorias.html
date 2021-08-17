@@ -23,3 +23,9 @@
         </tr>
     {% endfor %}
 {% endblock %}
+
+{% block footer %}
+    <a href="{% url 'addCat' %}" class="btn btn-outline-dark btn-block btn-sm"><i class="fa fa-plus"></i> Agregar más
+        categorias
+    </a>
+{% endblock %}

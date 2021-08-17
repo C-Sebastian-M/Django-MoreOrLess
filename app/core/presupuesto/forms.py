@@ -19,7 +19,7 @@ class PresupuestoForm(ModelForm):
                     'placeholder': 'Ingrese el monto del presupuesto',
                 }
             ),
-            'category': TextInput(
+             'category': Select(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Categoria',

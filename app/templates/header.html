@@ -37,7 +37,7 @@
                                     <a href="{% url 'perfil' %}" class="dropdown-item">Configuración</a>
                                 </li>
 
-                                <li><a href="#" class="dropdown-item">Salir</a></li>
+                                <li><a href="{% url 'logout' %}" class="dropdown-item">Salir</a></li>
                             </ul>
                         </li>
                         <!-- End Level two -->
@@ -157,7 +157,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="salir.html" class="nav-link">
+                            <a href="{% url 'logout' %}" class="nav-link">
                                 <i class="nav-icon fas fa-user-times"></i>
                                 <p>Salir</p>
                             </a>

@@ -1,47 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Se organizo el metodo de desarrollo, desde cada modulo se manejan sus templates, Ajax funcionando y UpdateView listo">
-      <change afterPath="$PROJECT_DIR$/core/categorias/templates/delete_categoria.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/templates/delete_gastos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/metas/templates/delete_metas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/presupuesto/templates/delete_presupuesto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Delete view, login view funcionando">
+      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0013_auto_20210817_1349.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/informes/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/metas/migrations/0004_auto_20210817_1349.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/presupuesto/migrations/0005_alter_presupuesto_category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/presupuesto/migrations/0006_alter_presupuesto_amount.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/templates/categorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/templates/categorias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/templates/form_categoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/templates/form_categoria.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/categorias/templates/list_categorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/templates/list_categorias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/templates/form_gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/templates/form_gastos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/templates/gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/templates/gastos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/gastos/templates/list_gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/templates/list_gastos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/templates/form_metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/templates/form_metas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/templates/metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/templates/metas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/templates/form_presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/templates/form_presupuesto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/presupuesto/templates/list_presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/templates/list_presupuesto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/recover-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/recover-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +154,8 @@
       <workItem from="1628811931638" duration="5663000" />
       <workItem from="1628948864985" duration="2881000" />
       <workItem from="1628960509575" duration="6261000" />
-      <workItem from="1629156457466" duration="6868000" />
+      <workItem from="1629156457466" duration="7097000" />
+      <workItem from="1629217168640" duration="4664000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -255,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628965758926</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Delete view, login view funcionando">
+      <created>1629163592455</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629163592455</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +312,8 @@
     <MESSAGE value="Organice y agregue herencia en listas, apps y urls" />
     <MESSAGE value="Se agregaron formularios con herencia y metodo post, falta arreglar categoria para que funcione en general." />
     <MESSAGE value="Se organizo el metodo de desarrollo, desde cada modulo se manejan sus templates, Ajax funcionando y UpdateView listo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se organizo el metodo de desarrollo, desde cada modulo se manejan sus templates, Ajax funcionando y UpdateView listo" />
+    <MESSAGE value="Delete view, login view funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete view, login view funcionando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

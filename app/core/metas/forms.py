@@ -21,7 +21,7 @@ class MetasForm(ModelForm):
                     'class': 'form-control',
                 }
             ),
-            'category': TextInput(
+            'category': Select(
                 attrs={
                     'class': 'form-control select2',
                 }

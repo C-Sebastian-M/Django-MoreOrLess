@@ -21,7 +21,7 @@ class GastosForm(ModelForm):
                     'placeholder': 'Ingrese el monto del gasto',
                 }
             ),
-            'category': TextInput(
+            'category': Select(
                 attrs={
                     'class': 'form-control'
                 }

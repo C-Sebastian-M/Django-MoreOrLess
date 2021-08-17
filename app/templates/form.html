@@ -14,8 +14,9 @@
                         </div>
                         <div class="card-body">
                             {% csrf_token %}
-                                <input type="hidden" name="action" value="{{ action }}">
+                            <input type="hidden" name="action" value="{{ action }}">
                             {% for field in form.visible_fields %}
+
                                 {% if field.label == 'Categoria' %}
                                     <div class="form-group">
                                         <label>{{ field.label }}:</label>

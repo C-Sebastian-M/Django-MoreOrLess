@@ -5,11 +5,13 @@ from django.db import models
 # Create your models here.
 from django.forms import model_to_dict
 
+from core.categorias.models import Categoria
+
 
 class Presupuesto(models.Model):
     date = models.DateField(auto_now=True, verbose_name='Fecha de registro')
-    amount = models.DecimalField(max_digits=9, decimal_places=3, verbose_name='Monto')
-    category = models.CharField(max_length=50, verbose_name='Categoria')
+    amount = models.FloatField('Monto', blank = True, default =None, null = True)
+    category = models.ForeignKey(Categoria, blank = True, null = True,on_delete=models.CASCADE)
 
     def __str__(self):
         return self.date
