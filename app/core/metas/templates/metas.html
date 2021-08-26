@@ -1,4 +1,5 @@
 {% extends 'body.html' %}
+{% load humanize %}
 {% load static %}
 {% block content %}
     <div class="content-wrapper">
@@ -80,7 +81,7 @@
                                     {% for c in object_list %}
                                         <tr>
                                             <td>{{ c.category }}</td>
-                                            <td>${{ c.amount }}</td>
+                                            <td>${{ c.amount|intcomma }}</td>
                                             <td>{{ c.date }}</td>
                                             <td>{{ c.f_c_m }}</td>
                                             <td>

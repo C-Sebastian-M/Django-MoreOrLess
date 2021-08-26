@@ -1,4 +1,5 @@
 {% extends 'list.html' %}
+{% load humanize %}
 {% block columns %}
     <tr>
         <th>Categoria</th>
@@ -12,7 +13,7 @@
     {% for c in object_list %}
         <tr>
             <td>{{ c.category }}</td>
-            <td>{{ c.amount }}</td>
+            <td>${{ c.amount|intcomma }}</td>
             <td>{{ c.date }}</td>
             <td>
                 <a href="{% url 'editGast' c.id %}" class="btn btn-info btn-xs"><i class="fas fa-edit"></i>

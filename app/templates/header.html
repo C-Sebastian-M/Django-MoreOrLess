@@ -85,11 +85,11 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{% static 'img/WhatsApp Image 2020-12-22 at 10.58.25 AM.jpeg' %}"
+                <img src="{{ request.user.get_image }}"
                      class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="{% url 'perfil' %}" class="d-block">Oscar Barrero</a>
+                <a href="{% url 'perfil' %}" class="d-block">{{ request.user.get_full_name }}</a>
             </div>
         </div>
 

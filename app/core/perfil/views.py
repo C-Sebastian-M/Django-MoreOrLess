@@ -1,15 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-
-from core import perfil
-from core.perfil.models import user
-from core.presupuesto.models import Presupuesto
+from core.perfil.models import Perfil
 
 # Create your views here.
 
 
 class PerfilListView(ListView):
-    model = user
+    model = Perfil
     template_name = 'perfil.html'
 
     def get_context_data(self, **kwargs):
