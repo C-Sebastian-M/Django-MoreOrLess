@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.presupuesto.forms import PresupuestoForm
 from core.presupuesto.models import Presupuesto
@@ -13,9 +14,10 @@ class PresupuestoListView(ListView):
     model = Presupuesto
     template_name = 'presupuesto.html'
 
+    @method_decorator(csrf_exempt)
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-        self.object = self
+        self.object = None
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
@@ -30,9 +32,10 @@ class PresupuestoCreateView(CreateView):
     template_name = 'form_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
 
+    @method_decorator(csrf_exempt)
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-        self.object = self.get_object()
+        self.object = None
         return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
@@ -62,7 +65,6 @@ class PresupuestoUpdateView(UpdateView):
     template_name = 'form_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
 
-    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -93,7 +95,6 @@ class PresupuestoDeleteView(DeleteView):
     template_name = 'delete_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
 
-    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

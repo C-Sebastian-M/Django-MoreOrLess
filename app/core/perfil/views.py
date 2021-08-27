@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView
 from core.perfil.models import Perfil
 
@@ -10,6 +11,7 @@ class PerfilListView(ListView):
     model = Perfil
     template_name = 'perfil.html'
 
+    @method_decorator(csrf_exempt)
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self

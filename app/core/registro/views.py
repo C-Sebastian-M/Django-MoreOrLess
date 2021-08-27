@@ -1,4 +1,3 @@
-
 from core.registro.forms import RegistroUsuariosForm
 from core.registro.models import RegistroUsuario
 from django.http import JsonResponse
