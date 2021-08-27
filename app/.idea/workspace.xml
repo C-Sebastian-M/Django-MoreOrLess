@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Registro funcionando,decoradores funcionando, falta solucionar redireccion cuando se finaliza el registro, organizacion del proyecto aunque falta mayor organizacion en los HTML">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/templates/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/templates/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +145,8 @@
       <workItem from="1629844590821" duration="4139000" />
       <workItem from="1630000801875" duration="8175000" />
       <workItem from="1630015187421" duration="13435000" />
-      <workItem from="1630077749599" duration="1105000" />
+      <workItem from="1630077749599" duration="1724000" />
+      <workItem from="1630084350754" duration="951000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -264,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630030302188</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Registro funcionando,decoradores funcionando, falta solucionar redireccion cuando se finaliza el registro, organizacion del proyecto aunque falta mayor organizacion en los HTML">
+      <created>1630079174039</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1630079174039</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

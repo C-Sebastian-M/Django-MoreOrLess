@@ -31,4 +31,5 @@ class RegistroCreateView(CreateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Registro de usuario'
         context['action'] = 'add'
+        context['list_url'] = reverse_lazy('index')
         return context
