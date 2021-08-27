@@ -1,5 +1,7 @@
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from core.categorias.forms import CategoriaForm
 from core.categorias.models import Categoria
@@ -11,6 +13,11 @@ class CategoriaListView(ListView):
     model = Categoria
     template_name = 'categorias.html'
 
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self
+        return super().dispatch(request, *args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Categorias creadas'
@@ -21,6 +28,11 @@ class CategoriaCreateView(CreateView):
     form_class = CategoriaForm
     template_name = 'form_categoria.html'
     success_url = reverse_lazy('')
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         data = {}
@@ -48,6 +60,7 @@ class CategoriaUpdateView(UpdateView):
     template_name = 'form_categoria.html'
     success_url = reverse_lazy('')
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -78,6 +91,7 @@ class CategoriaDeleteView(DeleteView):
     template_name = 'delete_categoria.html'
     success_url = reverse_lazy('categorias')
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

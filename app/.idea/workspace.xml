@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Algunos errores en el registro, actualizacion de estilos etc">
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Registro funcionando, falta solucionar redireccion cuando se finaliza el registro">
+      <change afterPath="$PROJECT_DIR$/core/homepage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/homepage/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/homepage/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/homepage/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/homepage/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/homepage/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/categorias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/migrations/0002_alter_registro_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/templates/registro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/informes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/templates/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/templates/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/homepage/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/forgot-password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/homepage/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/recover-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/recover-password.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +91,11 @@
       <recent name="C:\Users\topas\OneDrive\Escritorio\Curso Django\proyecto_sena\Django-MoreOrLess\app\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\registro\templates" />
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\homepage\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core" />
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\registro\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\templates\pages" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\templates" />
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\usuario\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -162,7 +162,7 @@
       <workItem from="1629829196370" duration="8855000" />
       <workItem from="1629844590821" duration="4139000" />
       <workItem from="1630000801875" duration="8175000" />
-      <workItem from="1630015187421" duration="11187000" />
+      <workItem from="1630015187421" duration="13347000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -269,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630008890362</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Registro funcionando, falta solucionar redireccion cuando se finaliza el registro">
+      <created>1630028337000</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1630028337000</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +343,8 @@
     <MESSAGE value="Delete view, login view funcionando" />
     <MESSAGE value="Select en categoria funcionando" />
     <MESSAGE value="Algunos errores en el registro, actualizacion de estilos etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Algunos errores en el registro, actualizacion de estilos etc" />
+    <MESSAGE value="Registro funcionando, falta solucionar redireccion cuando se finaliza el registro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registro funcionando, falta solucionar redireccion cuando se finaliza el registro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

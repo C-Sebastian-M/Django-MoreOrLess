@@ -1,7 +1,7 @@
-from django.http import HttpResponseRedirect, JsonResponse
-from django.shortcuts import render
-
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.presupuesto.forms import PresupuestoForm
 from core.presupuesto.models import Presupuesto
@@ -12,6 +12,11 @@ from core.presupuesto.models import Presupuesto
 class PresupuestoListView(ListView):
     model = Presupuesto
     template_name = 'presupuesto.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -24,6 +29,11 @@ class PresupuestoCreateView(CreateView):
     form_class = PresupuestoForm
     template_name = 'form_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         data = {}
@@ -52,6 +62,7 @@ class PresupuestoUpdateView(UpdateView):
     template_name = 'form_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -82,6 +93,7 @@ class PresupuestoDeleteView(DeleteView):
     template_name = 'delete_presupuesto.html'
     success_url = reverse_lazy('presupuesto')
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

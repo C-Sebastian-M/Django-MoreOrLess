@@ -21,9 +21,9 @@
                             {{ field | add_class:'form-control' }}
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    {% if field.label == 'Nombre de usuario' or field.label == 'Apellidos' %}
+                                    {% if field.label == 'Nombre de usuario'  %}
                                         <i class="fas fa-user"></i>
-                                    {% elif field.label == 'Nombre' %}
+                                    {% elif field.label == 'Nombre' or field.label == 'Apellidos' %}
                                         <i class="fas fa-user-circle"></i>
                                     {% elif field.label == 'Dirección de correo electrónico' %}
                                         <i class="fas fa-envelope"></i>

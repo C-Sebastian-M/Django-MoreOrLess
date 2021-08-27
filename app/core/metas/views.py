@@ -1,6 +1,7 @@
-from django.http import HttpResponseRedirect, JsonResponse
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.metas.forms import MetasForm
 from core.metas.models import Metas
@@ -10,6 +11,11 @@ from core.metas.models import Metas
 class MetasListView(ListView):
     model = Metas
     template_name = 'metas.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -21,6 +27,11 @@ class MetasCreateView(CreateView):
     form_class = MetasForm
     template_name = 'form_metas.html'
     success_url = reverse_lazy('metas')
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         data = {}
@@ -49,6 +60,7 @@ class MetasUpdateView(UpdateView):
     template_name = 'form_metas.html'
     success_url = reverse_lazy('metas')
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -74,11 +86,13 @@ class MetasUpdateView(UpdateView):
 
         return context
 
+
 class MetasDeleteView(DeleteView):
     model = Metas
     template_name = 'delete_metas.html'
     success_url = reverse_lazy('metas')
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

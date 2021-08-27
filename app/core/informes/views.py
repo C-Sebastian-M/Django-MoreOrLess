@@ -1,8 +1,7 @@
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView
-
 from core.informes.models import informes
-from core.presupuesto.models import Presupuesto
 
 # Create your views here.
 
@@ -10,6 +9,11 @@ from core.presupuesto.models import Presupuesto
 class InformesListView(ListView):
     model = informes
     template_name = 'informes.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
