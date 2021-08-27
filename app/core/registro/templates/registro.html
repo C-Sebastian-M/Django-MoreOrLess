@@ -40,21 +40,6 @@
                     </div>
                     <!-- /.col -->
                 </form>
-                <script type="application/javascript">
-                    {% if form.error %}
-                        var errors = '';
-                        {% for field in form %}
-                            {% for error in field.errors %}
-                                errors += '{{ error }}\n'
-                            {% endfor %}
-                        {% endfor %}
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops... Error!',
-                            text: errors,
-                        })
-                    {% endif %}
-                </script>
                 <a href="{% url 'login' %}" class="text-center">Ya estoy registrado</a>
             </div>
 
@@ -63,7 +48,21 @@
         <!-- /.form-box -->
     </div><!-- /.card -->
 
-
+    <script type="application/javascript">
+        {% if form.errors %}
+            var errors = '';
+            {% for field in form %}
+                {% for error in field.errors %}
+                    errors += '{{ error }}\n'
+                {% endfor %}
+            {% endfor %}
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops... Error!',
+                text: errors,
+            })
+        {% endif %}
+    </script>
     <!-- /.login-box -->
 
     <!-- jQuery -->

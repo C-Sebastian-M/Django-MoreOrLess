@@ -1,10 +1,8 @@
-from datetime import datetime
-
 from django.db import models
-
-# Create your models here.
 from django.forms import model_to_dict
 
+
+# Create your models here.
 
 class Categoria(models.Model):
     category = models.CharField(max_length=50, verbose_name='Categoria')

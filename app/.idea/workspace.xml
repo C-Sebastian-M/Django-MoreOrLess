@@ -1,49 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Select en categoria funcionando y algun cambio más">
-      <change afterPath="$PROJECT_DIR$/core/migrations/0007_delete_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0002_rename_user_perfil.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/migrations/0002_alter_registro_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/templates/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/registro/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC_EQ3iYxw.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC_QEHp28e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC_mEADJHd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatar/21/08/26/FAMILY_TREE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/avatar/21/08/26/FAMILY_TREE_kZy5adJ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/josh-appel-NeTPASr-bmQ-unsplash (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/visual-stories-micheile-f030K9IzpcM-unsplash.jpg" afterDir="false" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Algunos errores en el registro, actualizacion de estilos etc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/categorias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/categorias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/templates/list_gastos.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/templates/list_gastos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/login/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/templates/metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/templates/metas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/perfil/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/perfil/templates/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/templates/perfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/perfil/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/templates/list_presupuesto.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/templates/list_presupuesto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/migrations/0002_alter_registro_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/templates/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/WhatsApp Image 2020-12-22 at 10.58.25 AM.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/register.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -112,9 +93,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\registro\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core" />
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\templates\pages" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\usuario\templates" />
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\login\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -180,7 +161,8 @@
       <workItem from="1629815937638" duration="2167000" />
       <workItem from="1629829196370" duration="8855000" />
       <workItem from="1629844590821" duration="4139000" />
-      <workItem from="1630000801875" duration="7945000" />
+      <workItem from="1630000801875" duration="8175000" />
+      <workItem from="1630015187421" duration="11187000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -280,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629226548277</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Algunos errores en el registro, actualizacion de estilos etc">
+      <created>1630008890362</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1630008890362</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +335,8 @@
     <MESSAGE value="Se organizo el metodo de desarrollo, desde cada modulo se manejan sus templates, Ajax funcionando y UpdateView listo" />
     <MESSAGE value="Delete view, login view funcionando" />
     <MESSAGE value="Select en categoria funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Select en categoria funcionando" />
+    <MESSAGE value="Algunos errores en el registro, actualizacion de estilos etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algunos errores en el registro, actualizacion de estilos etc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

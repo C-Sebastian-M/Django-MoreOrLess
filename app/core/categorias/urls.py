@@ -1,7 +1,4 @@
-from django.contrib.auth.decorators import login_required
 from django.urls import path
-from django.utils.decorators import method_decorator
-
 from core.categorias.views import *
 
 urlpatterns = [

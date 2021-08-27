@@ -1,6 +1,4 @@
 from django.forms import *
-
-from core.categorias.models import Categoria
 from core.gastos.models import *
 
 
