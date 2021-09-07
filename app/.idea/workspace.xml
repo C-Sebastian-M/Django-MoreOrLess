@@ -2,11 +2,211 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Registro funcionando,decoradores funcionando, falta solucionar redireccion cuando se finaliza el registro, organizacion del proyecto aunque falta mayor organizacion en los HTML">
+      <change afterPath="$PROJECT_DIR$/core/perfil/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0003_perfil_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0004_auto_20210902_1725.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0005_remove_perfilmodel_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0006_auto_20210906_1945.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0007_remove_perfil_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0008_rename_perfil_perfilmodel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/migrations/0009_perfilmodel_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/perfil/templates/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/registro/migrations/0002_alter_registrousuario_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/registro/migrations/0003_alter_registrousuario_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/registro/migrations/0004_remove_registrousuario_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/registro/migrations/0005_registrousuario_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/registro/templates/delete_usuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/registro/templates/form_usuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/perfil/2021/09/07/FAMILY_TREE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/django_jazzmin-2.4.8.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/django_jazzmin-2.4.8.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/django_jazzmin-2.4.8.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/django_jazzmin-2.4.8.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/django_jazzmin-2.4.8.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/django_jazzmin-2.4.8.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/bg/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/bg/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/de/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/de/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/es/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/es/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/hu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/hu/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/zh_Hant/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/locale/zh_Hant/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/admin/js/cancel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/admin/js/popup_response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/img/calendar-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/img/default-log.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/img/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/img/icon-calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/img/icon-changelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/img/selector-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/js/change_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/js/change_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/js/related-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/js/ui-builder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/jazzmin/plugins/bootstrap-show-modal/bootstrap-show-modal.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/adminlte/css/adminlte.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/adminlte/css/adminlte.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/adminlte/img/AdminLTELogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/adminlte/img/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/adminlte/img/user2-160x160.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/adminlte/js/adminlte.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/adminlte/js/adminlte.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/cerulean/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/cosmo/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/cyborg/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/darkly/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/default/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/flatly/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/journal/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/litera/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/lumen/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/lux/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/materia/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/minty/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/pulse/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/sandstone/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/simplex/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/sketchy/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/slate/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/solar/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/spacelab/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/superhero/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/united/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/bootswatch/yeti/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/css/all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/select2/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/static/vendor/select2/js/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/actions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/app_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/auth/user/add_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/auth/user/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/base_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/change_form_object_tools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/change_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/change_list_object_tools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/change_list_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/date_hierarchy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/delete_confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/delete_selected_confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/edit_inline/stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/edit_inline/tabular.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/breadcrumbs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/delete_selected_files_confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/file/change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/folder/change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/folder/directory_listing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/image/change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filer/tools/detail_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/change_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/change_list_export.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/change_list_export_item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/change_list_import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/change_list_import_export.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/change_list_import_item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/export.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/import_export/import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/includes/fieldset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/includes/object_delete_summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/mptt_filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/object_history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/popup_response.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/search_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/solo/change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/solo/object_history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin/submit_line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/base_docs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/bookmarklets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/missing_docutils.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/model_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/model_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/template_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/template_filter_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/template_tag_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/view_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/admin_doc/view_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/includes/carousel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/includes/collapsible.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/includes/horizontal_tabs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/includes/related_modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/includes/single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/includes/ui_builder_panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/includes/vertical_tabs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/jazzmin/widgets/select.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/registration/logged_out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/registration/password_change_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templates/registration/password_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/templatetags/jazzmin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/jazzmin/widgets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/templates/metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/templates/metas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/templates/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/templates/perfil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/registro/templates/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/templates/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC_EQ3iYxw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC_QEHp28e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar/21/08/24/Imagen-lienzo-BMC_mEADJHd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar/21/08/26/FAMILY_TREE.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/perfil/2021/09/06/FAMILY_TREE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar/21/08/26/FAMILY_TREE_kZy5adJ.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/perfil/2021/09/06/FAMILY_TREE_QN5hopB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +219,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -73,9 +273,9 @@
       <recent name="C:\Users\topas\OneDrive\Escritorio\Curso Django\proyecto_sena\Django-MoreOrLess\app\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\registro\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\homepage\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core" />
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\registro\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\templates\pages" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\templates" />
     </key>
@@ -146,7 +346,16 @@
       <workItem from="1630000801875" duration="8175000" />
       <workItem from="1630015187421" duration="13435000" />
       <workItem from="1630077749599" duration="1724000" />
-      <workItem from="1630084350754" duration="951000" />
+      <workItem from="1630084350754" duration="1249000" />
+      <workItem from="1630088133493" duration="122000" />
+      <workItem from="1630432647930" duration="7083000" />
+      <workItem from="1630606822697" duration="12385000" />
+      <workItem from="1630629023764" duration="44000" />
+      <workItem from="1630720037600" duration="717000" />
+      <workItem from="1630946270327" duration="2891000" />
+      <workItem from="1630955973124" duration="1987000" />
+      <workItem from="1630975097368" duration="5574000" />
+      <workItem from="1631035810160" duration="1253000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -274,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630079174039</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Registro funcionando,decoradores funcionando, falta solucionar redireccion cuando se finaliza el registro, organizacion del proyecto aunque falta mayor organizacion en los HTML">
+      <created>1630085600802</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1630085600802</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

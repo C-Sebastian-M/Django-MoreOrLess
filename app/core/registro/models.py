@@ -1,7 +1,6 @@
-
 from django.contrib.auth.models import AbstractUser
+from config.settings import MEDIA_URL, STATIC_URL
 from django.db import models
-from config.settings import STATIC_URL, MEDIA_URL
 
 # Create your models here.
 
@@ -12,8 +11,4 @@ class RegistroUsuario(AbstractUser):
     def get_image(self):
         if self.image:
             return "{}{}".format(MEDIA_URL, self.image)
-        return "{}{}".format(STATIC_URL,'img/imagen-perfil-sin-foto.png')
-
-    def get_email(self):
-        return self.email
-
+        return "{}{}".format(STATIC_URL, 'img/imagen-perfil-sin-foto.png')

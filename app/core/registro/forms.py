@@ -5,7 +5,11 @@ from core.registro.models import RegistroUsuario
 class RegistroUsuariosForm(UserCreationForm):
     class Meta:
         model = RegistroUsuario
-        fields = 'first_name','last_name','username','email'
+        fields = 'first_name', 'last_name', 'username', 'email','image',
+        labels = {
+            'image':'Imagen de perfil (opcional)'
+        }
+
 
     def save(self, commit=True):
         data = {}

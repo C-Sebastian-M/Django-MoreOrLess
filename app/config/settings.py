@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -151,4 +152,8 @@ AUTH_USER_MODEL = 'registro.RegistroUsuario'
 
 LOGIN_URL = 'login'
 
-
+JAZZMIN_SETTINGS = {
+    'site_title': 'More or Less',
+    'site_header': 'More or Less',
+    'site_logo': 'app/static/img/logo3.png',
+}

@@ -18,7 +18,8 @@ class MetasForm(ModelForm):
         widgets = {
             'f_c_m': DateInput(
                 attrs={
-                    'class': 'form-control',
+                    'class': 'form-control datetimepicker-input',
+                    'type' : 'date',
                 }
             ),
             'category': Select(

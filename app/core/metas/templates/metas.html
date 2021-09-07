@@ -85,12 +85,13 @@
                                             <td>{{ c.date }}</td>
                                             <td>{{ c.f_c_m }}</td>
                                             <td>
-                                                <button type="button" class="btn btn-info btn-xs"><i
-                                                        class="fas fa-check"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-danger btn-xs"><i
-                                                        class="fas fa-times"></i>
-                                                </button>
+                                                <div class="progress">
+                                                    <div id="myBar" class="progress-bar" role="progressbar">
+                                                        <div id="label">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
                                             </td>
                                             <td>
                                                 <a href="{% url 'editMe' c.id %}" class="btn btn-info btn-xs"><i
@@ -124,6 +125,14 @@
             </div>
         </section>
     </div>
+    <script type="application/javascript">
+        function move() {
+            let elem = document.getElementById("myBar");
+            let width = 10;
+            elem.style.width = width + '%';
+            document.getElementById("label").innerHTML = width ** 1 + '%';
 
+        }
+    </script>
 
 {% endblock %}

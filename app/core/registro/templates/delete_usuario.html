@@ -1,0 +1,84 @@
+{% extends 'body.html' %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">{{ title }}</h1>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+        </div>
+        <!-- Aqui va toda la info del main -->
+        <section class="content">
+            <div class="container">
+                <form method="post" action=".">
+                    <div class="card card-outline card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">{{ title }}</h3>
+                        </div>
+                        <div class="card-body">
+                            {% csrf_token %}
+                            <div class="alert alert-danger alert-dismissible">
+                                <h5><i class="icon fas fa-ban"></i> Alerta</h5>
+                                ¿Estas seguro de que quieres eliminar la cuenta {{ object.username }}?
+
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btnTest"><i
+                                        class="fas fa-save"></i>
+                                    Si, aceptar
+                                </button>
+                                <a href="{{ list_url }}" class="btn btn-danger btnTest"><i
+                                        class="fas fa-times"></i>
+                                    Cancelar
+                                </a>
+                            </div>
+                        </div>
+                </form>
+                <script>
+                    {% if form.errors %}
+                        let errors = '';
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                errors += '{{ error }}\n'
+                            {% endfor %}
+                        {% endfor %}
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops... Error!',
+                            text: errors,
+                        })
+                    {% endif %}
+                    $('form').on('submit', function (e) {
+                        e.preventDefault();
+                        var parameters = $(this).serializeArray();
+                        $.ajax({
+                            url: window.location.pathname,
+                            type: 'POST',
+                            data: parameters,
+                            dataType: 'json'
+                        }).done(function (data) {
+                            console.log(data);
+                            if (!data.hasOwnProperty('error')) {
+                                location.href = '{{ list_url }}';
+                                return false;
+                            }
+                            message_error(data.error);
+                        }).fail(function (jqXHR, textStatus, errorThrown) {
+                            alert(textStatus + ': ' + errorThrown);
+                        }).always(function (data) {
+
+                        });
+
+                    });
+                </script>
+            </div>
+        </section>
+    </div>
+
+
+{% endblock %}
