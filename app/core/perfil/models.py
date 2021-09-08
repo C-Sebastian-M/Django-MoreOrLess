@@ -1,8 +1,8 @@
 from django.db import models
-from config.settings import MEDIA_URL, STATIC_URL
+from core.registro.models import RegistroUsuario
 
 # Create your models here.
-from core.registro.models import RegistroUsuario
+
 
 
 class PerfilModel(models.Model):
