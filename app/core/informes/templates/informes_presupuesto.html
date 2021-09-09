@@ -1,0 +1,356 @@
+{% load static %}
+{% block content %}
+    <div class="tab-pane" id="tab_2">
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Aqui estan las graficas de la izquierda-->
+                    <div class="col-md-6">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Semanal</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <figure class="highcharts-figure">
+                                        <div id="container-semP"></div>
+                                        <p class="highcharts-description">
+                                        </p>
+                                    </figure>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Resumen</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <table class="table table-responsive">
+                                            <tr>
+                                                <th>Ingresos</th>
+                                                <td style="color: green;">
+                                                    {{ presupuesto_t }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gastos</th>
+                                                <td style="color: red;">
+                                                    {{ gastos_t }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total</th>
+                                                <td>{{ restante }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <div class="card card-red">
+                            <div class="card-header">
+                                <h3 class="card-title">Anual</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <figure class="highcharts-figure">
+                                        <div id="container-anualP"></div>
+                                        <p class="highcharts-description">
+                                        </p>
+                                    </figure>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Resumen</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <table class="table table-responsive">
+                                            <tr>
+                                                <th>Ingresos</th>
+                                                <td style="color: green;">
+                                                    {{ presupuesto_t }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gastos</th>
+                                                <td style="color: red;">
+                                                    {{ gastos_t }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total</th>
+                                                <td>{{ restante }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- DONUT CHART -->
+                        <div class="card card-dark">
+                            <div class="card-header">
+                                <h3 class="card-title">Mensual</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <figure class="highcharts-figure">
+                                        <div id="container-mensP"></div>
+                                        <p class="highcharts-description">
+                                        </p>
+                                    </figure>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Resumen</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <table class="table table-responsive">
+                                            <tr>
+                                                <th>Ingresos</th>
+                                                <td style="color: green;">
+                                                    {{ presupuesto_t }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gastos</th>
+                                                <td style="color: red;">
+                                                    {{ gastos_t }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total</th>
+                                                <td>{{ restante }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- grafica anual -->
+    <script type="application/javascript">
+        // Build the chart
+        var graphPorcentajeAP = Highcharts.chart('container-anualP', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Grafico de presupuestos anuales'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+
+        });
+
+        function porcentaje_presupuesto_anuales() {
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'porcentaje_presupuestos_anuales'
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                if (!data.hasOwnProperty('error')) {
+                    graphPorcentajeAP.addSeries(data);
+                    return false;
+                }
+                message_error(data.error);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+        }
+    </script>
+    <!-- grafica mensual -->
+    <script type="application/javascript">
+        // Build the chart
+        var graphPorcentajeMP = Highcharts.chart('container-mensP', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Grafico de presupuestos mensuales'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+
+        });
+
+        function porcentaje_presupuesto_mensuales() {
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'porcentaje_presupuestos_mensuales'
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                if (!data.hasOwnProperty('error')) {
+                    graphPorcentajeMP.addSeries(data);
+                    console.log(data)
+                    return false;
+                }
+                message_error(data.error);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+        }
+    </script>
+    <!-- grafica semanal -->
+    <script type="application/javascript">
+        // Build the chart
+        var graphPorcentajeSP = Highcharts.chart('container-semP', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Grafico de presupuestos semanales'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+
+        });
+
+        function porcentaje_presupuesto_semanales() {
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'porcentaje_presupuestos_semanales'
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                if (!data.hasOwnProperty('error')) {
+                    graphPorcentajeSP.addSeries(data);
+                    return false;
+                }
+                message_error(data.error);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+        }
+
+        $(function () {
+            porcentaje_presupuesto_semanales()
+            porcentaje_presupuesto_mensuales()
+            porcentaje_presupuesto_anuales()
+        });
+    </script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

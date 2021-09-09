@@ -1,0 +1,384 @@
+{% load static %}
+{% block content %}
+    <div class="card-body">
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab_1">
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- DONUT CHART -->
+                            <div class="card-dark col-12">
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <!-- Main content -->
+                                    <section class="content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <!-- AREA CHART -->
+                                                    <div class="card card-primary">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Semanal</h3>
+                                                        </div>
+
+                                                        <!-- /.card-body -->
+                                                        <div class="card-body">
+                                                            <div class="chart">
+                                                                <div class="chartjs-size-monitor">
+                                                                    <div class="chartjs-size-monitor-expand">
+                                                                        <div class=""></div>
+                                                                    </div>
+                                                                    <div class="chartjs-size-monitor-shrink">
+                                                                        <div class=""></div>
+                                                                    </div>
+                                                                </div>
+                                                                <figure class="highcharts-figure">
+                                                                    <div id="container-sem"></div>
+                                                                    <p class="highcharts-description">
+                                                                    </p>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <h3 class="card-title">Resumen</h3>
+                                                                </div>
+                                                                <!-- /.card-header -->
+                                                                <div class="card-body">
+                                                                    <table class="table table-responsive">
+                                                                        <tr>
+                                                                            <th>Ingresos</th>
+                                                                            <td style="color: green;">
+                                                                                {{ presupuesto_t }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Gastos</th>
+                                                                            <td style="color: red;">
+                                                                                {{ gastos_t }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Total</th>
+                                                                            <td>{{ restante }}</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <!-- /.card-body -->
+                                                    </div>
+                                                    <!-- /.card -->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- AREA CHART -->
+                                                    <div class="card card-dark">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Mensual</h3>
+                                                        </div>
+
+                                                        <!-- /.card-body -->
+                                                        <div class="card-body">
+                                                            <div class="chart">
+                                                                <div class="chartjs-size-monitor">
+                                                                    <div class="chartjs-size-monitor-expand">
+                                                                        <div class=""></div>
+                                                                    </div>
+                                                                    <div class="chartjs-size-monitor-shrink">
+                                                                        <div class=""></div>
+                                                                    </div>
+                                                                </div>
+                                                                <figure class="highcharts-figure">
+                                                                    <div id="container-mens"></div>
+                                                                    <p class="highcharts-description">
+                                                                    </p>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <h3 class="card-title">Resumen</h3>
+                                                                </div>
+                                                                <!-- /.card-header -->
+                                                                <div class="card-body">
+                                                                    <table class="table table-responsive">
+                                                                        <tr>
+                                                                            <th>Ingresos</th>
+                                                                            <td style="color: green;">
+                                                                                {{ presupuesto_t }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Gastos</th>
+                                                                            <td style="color: red;">
+                                                                                {{ gastos_t }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Total</th>
+                                                                            <td>{{ restante }}</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <!-- /.card-body -->
+                                                    </div>
+                                                    <!-- /.card -->
+                                                </div>
+                                                <!-- /.col (LEFT) -->
+                                                <div class="col-md-6">
+                                                    <!-- AREA CHART -->
+                                                    <div class="card card-yellow">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Anual</h3>
+                                                        </div>
+
+                                                        <!-- /.card-body -->
+                                                        <div class="card-body">
+                                                            <div class="chart">
+                                                                <div class="chartjs-size-monitor">
+                                                                    <div class="chartjs-size-monitor-expand">
+                                                                        <div class=""></div>
+                                                                    </div>
+                                                                    <div class="chartjs-size-monitor-shrink">
+                                                                        <div class=""></div>
+                                                                    </div>
+                                                                </div>
+                                                                <figure class="highcharts-figure">
+                                                                    <div id="container-year"></div>
+                                                                    <p class="highcharts-description">
+                                                                    </p>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <h3 class="card-title">Resumen</h3>
+                                                                </div>
+                                                                <!-- /.card-header -->
+                                                                <div class="card-body">
+                                                                    <table class="table table-responsive">
+                                                                        <tr>
+                                                                            <th>Ingresos</th>
+                                                                            <td style="color: green;">
+                                                                                {{ presupuesto_t }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Gastos</th>
+                                                                            <td style="color: red;">
+                                                                                {{ gastos_t }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Total</th>
+                                                                            <td>{{ restante }}</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.card-body -->
+                                                    </div>
+                                                    <!-- /.card -->
+                                                </div>
+
+                                                <!-- /.col (RIGHT) -->
+                                            </div>
+                                            <!-- /.row -->
+                                        </div>
+                                        <!-- /.container-fluid -->
+                                    </section>
+                                    <!-- /.content -->
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.tab-pane -->
+            {% include 'informes_presupuesto.html' %}
+            <!-- /.tab-pane -->
+        </div>
+        <!-- /.tab-content -->
+    </div>
+    <!-- grafica anual -->
+    <script type="application/javascript">
+        // Build the chart
+        var graphPorcentajeA;
+        graphPorcentajeA = Highcharts.chart('container-year', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Grafico de gastos anuales.'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+
+        });
+
+        function porcentaje_gastos_anuales() {
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'porcentaje_gastos_anuales'
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                if (!data.hasOwnProperty('error')) {
+                    graphPorcentajeA.addSeries(data);
+                    return false;
+                }
+                message_error(data.error);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+        }
+
+    </script>
+    <!-- grafica mensual -->
+    <script type="application/javascript">
+        // Build the chart
+        var graphPorcentajeM = Highcharts.chart('container-mens', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Graficos de gastos mensuales'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+
+        })
+
+        function porcentaje_gastos_mensuales() {
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'porcentaje_gastos_mensuales'
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                if (!data.hasOwnProperty('error')) {
+                    graphPorcentajeM.addSeries(data);
+                    return false;
+                }
+                message_error(data.error);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+        }
+
+    </script>
+    <!-- grafica semanal -->
+    <script type="application/javascript">
+        // Build the chart
+        var graphPorcentaje = Highcharts.chart('container-sem', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Grafico de gastos semanales'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+
+        });
+
+        function porcentaje_gastos_semanales() {
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'porcentaje_gastos_semanales'
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                if (!data.hasOwnProperty('error')) {
+                    graphPorcentaje.addSeries(data);
+                    return false;
+                }
+                message_error(data.error);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+        }
+
+        $(function () {
+            porcentaje_gastos_semanales();
+            porcentaje_gastos_anuales();
+            porcentaje_gastos_mensuales();
+        });
+    </script>
+{% endblock %}
