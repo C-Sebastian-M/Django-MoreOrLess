@@ -10,6 +10,7 @@ from django.views.generic import ListView
 
 from core.categorias.models import Categoria
 from core.gastos.models import Gastos
+from core.gastos.views import week
 from core.informes.models import informes
 
 
@@ -31,13 +32,14 @@ class InformesListView(ListView):
         total = 0
         year = datetime.now().year
         month = datetime.now().month
+        w = week(datetime(datetime.now().year, datetime.now().month, datetime.now().day))
 
         try:
             Catego = Categoria.objects.all().values_list('id', flat=True)
 
             for c in Catego:
                 variable = informes.objects.filter(category_id=c, date__year=year, date__month=month,
-                                                   semana=2).aggregate(Sum('gastos', output_field=FloatField()))
+                                                   semana=w).aggregate(Sum('gastos', output_field=FloatField()))
                 name = Categoria.objects.filter(id=c)
                 data.append({
                     'name': str(name[0]),
@@ -104,12 +106,13 @@ class InformesListView(ListView):
         totalP = 0
         year = datetime.now().year
         month = datetime.now().month
+        w = week(datetime(datetime.now().year, datetime.now().month, datetime.now().day))
 
         Catego = Categoria.objects.all().values_list('id', flat=True)
 
         for c in Catego:
             variable = informes.objects.filter(category_id=c, date__year=year, date__month=month,
-                                               semana=2).aggregate(Sum('presupuesto', output_field=FloatField()))
+                                               semana=w).aggregate(Sum('presupuesto', output_field=FloatField()))
             name = Categoria.objects.filter(id=c)
             data.append({
                 'name': str(name[0]),
