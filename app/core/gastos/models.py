@@ -24,3 +24,4 @@ class Gastos(models.Model):
         verbose_name_plural = 'Gastos'
         db_table = 'gastos'
         ordering = ['id']
+

@@ -83,6 +83,7 @@
         $('form').on('submit', function (e) {
             e.preventDefault();
             var parameters = $(this).serializeArray();
+            console.log(parameters)
             $.ajax({
                 url: window.location.pathname,
                 type: 'POST',

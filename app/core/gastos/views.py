@@ -1,6 +1,5 @@
 from datetime import datetime
 import calendar
-import calendar
 
 from django.db.models import FloatField, Sum
 from django.http import HttpResponseRedirect, JsonResponse
@@ -11,16 +10,10 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.gastos.forms import GastosForm
 from core.gastos.models import Gastos
-
 # Create your views here.
 from core.informes.models import informes
 
 
-def week(dt):
-    mth = calendar.monthcalendar(dt.year, dt.month)
-    for i, wk in enumerate(mth):
-        if dt.day in wk:
-            return i + 1
 
 
 class GastosListView(ListView):
@@ -76,15 +69,16 @@ class GastosCreateView(CreateView):
             if action == 'add':
                 form = self.get_form()
                 data = form.save()
-                informe = informes()
+                """informe = informes()
                 informe.gastos = form.cleaned_data.get('amount')
                 informe.category = form.cleaned_data.get('category')
                 informe.semana = week(datetime(datetime.now().year, datetime.now().month, datetime.now().day))
-                informe.save()
+                informe.save()"""
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
             data['error'] = str(e)
+
         return JsonResponse(data)
 
     def get_context_data(self, **kwargs):

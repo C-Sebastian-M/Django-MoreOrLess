@@ -1,4 +1,5 @@
 from datetime import datetime
+import calendar
 
 from django.contrib.auth.decorators import login_required
 from django.db.models import FloatField, Sum
@@ -10,8 +11,14 @@ from django.views.generic import ListView
 
 from core.categorias.models import Categoria
 from core.gastos.models import Gastos
-from core.gastos.views import week
+from core.presupuesto.models import Presupuesto
 from core.informes.models import informes
+
+def week(dt):
+    mth = calendar.monthcalendar(dt.year, dt.month)
+    for i, wk in enumerate(mth):
+        if dt.day in wk:
+            return i + 1
 
 
 # Create your views here.
@@ -24,6 +31,28 @@ class InformesListView(ListView):
     @method_decorator(login_required)
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
+        informes.objects.all().delete()
+        valores_gastos = Gastos.objects.all()
+        valores_presupesto = Presupuesto.objects.all()
+
+        for v in valores_gastos:
+            informe = informes()
+            informe.gastos = v.amount
+            informe.category_id = v.category_id
+            informe.gastos_id_id = v.id
+            informe.semana =week(datetime(v.date.year, v.date.month, v.date.day))
+            informe.save()
+
+        for v in valores_presupesto:
+            informe = informes()
+            informe.presupuesto = v.amount
+            informe.category_id = v.category_id
+            informe.presupuesto_id_id = v.id
+            informe.semana = week(datetime(v.date.year, v.date.month, v.date.day))
+            informe.save()
+
+
+
         self.porcentaje_gastos_semanales()
         return super().dispatch(request, *args, **kwargs)
 

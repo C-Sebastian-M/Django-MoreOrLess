@@ -106,6 +106,7 @@
                 },
                 dataType: 'json',
             }).done(function (data) {
+                console.log(data)
                 if (!data.hasOwnProperty('error')) {
                     graphcolumn.addSeries({
                         name: 'Ingresos',
@@ -115,6 +116,7 @@
                     });
                     return false;
                 }
+
                 message_error(data.error);
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 alert(textStatus + ': ' + errorThrown);

@@ -6,7 +6,7 @@ class GastosForm(ModelForm):
     class Meta:
         model = Gastos
         fields = '__all__'
-        exclude = ('date',)
+        exclude = ('date','semana')
         labels = {
             'amount': 'Monto',
             'category': 'Categoria',
@@ -31,6 +31,7 @@ class GastosForm(ModelForm):
         form = super()
         try:
             if form.is_valid():
+
                 form.save()
             else:
                 data['error'] = form.errors
