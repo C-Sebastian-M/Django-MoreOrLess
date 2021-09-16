@@ -6,6 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.metas.forms import MetasForm
 from core.metas.models import Metas
+from core.gastos.models import Gastos
+from core.categorias.models import Categoria
+from django.db.models import FloatField, Sum
 
 
 # Create your views here.
@@ -18,9 +21,45 @@ class MetasListView(ListView):
     def dispatch(self, request, *args, **kwargs):
         self.object = None
         return super().dispatch(request, *args, **kwargs)
+    def suma_gatos(self, f_c_m, date, categoria_id):
+        total = 0
+        for i in range(date.day, f_c_m.day):
+            variable = Gastos.objects.filter(category_id=categoria_id,
+                                               date__year=f_c_m.year,
+                                               date__month=f_c_m.month,
+                                              date__day=i).aggregate(Sum('amount', output_field=FloatField()))
+            if variable['amount__sum']==None:
+                continue
+            else:
+                total+=variable['amount__sum']
+
+        return total
+
+    def metas(self):
+        valores_metas = Metas.objects.all()
+        porcentaje_list = []
+        id = []
+        fcm = []
+        categoria = []
+        amount = []
+        date = []
+        for v in valores_metas:
+            gastos = self.suma_gatos(v.f_c_m, v.date, v.category_id)
+            porcetaje=(100*gastos)/v.amount
+            porcentaje_list.append(int(porcetaje))
+            id.append(v.id)
+            fcm.append(v.f_c_m)
+            obj = Categoria.objects.get(pk=v.category_id)
+            categoria.append(obj)
+            date.append(v.date)
+            amount.append(v.amount)
+        print(porcentaje_list)
+        gastos = zip(id,fcm,categoria,date, amount,porcentaje_list)
+        return gastos
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['gastos'] = self.metas()
         return context
 
 
@@ -42,6 +81,7 @@ class MetasCreateView(CreateView):
             action = request.POST['action']
             if action == 'add':
                 form = self.get_form()
+
                 data = form.save()
             else:
                 data['error'] = 'No ha ingresado ninguna opción'

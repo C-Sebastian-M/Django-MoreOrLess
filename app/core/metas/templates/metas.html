@@ -78,30 +78,36 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for c in object_list %}
+
+                                    {% for id,fcm,categoria,date, amount,porcentaje_list in gastos %}
+
                                         <tr>
-                                            <td>{{ c.category }}</td>
-                                            <td>${{ c.amount|intcomma }}</td>
-                                            <td>{{ c.date }}</td>
-                                            <td>{{ c.f_c_m }}</td>
+                                            <td>{{ categoria }}</td>
+                                            <td>${{ amount|intcomma }}</td>
+                                            <td>{{ date }}</td>
+                                            <td>{{ fcm }}</td>
                                             <td>
                                                 <div class="progress">
-                                                    <div id="myBar" class="progress-bar" role="progressbar">
-                                                        <div id="label">
-                                                        </div>
-                                                    </div>
-
+                                                  <div class="progress-bar"
+                                                       role="progressbar"
+                                                       style="width: {{ porcentaje_list }}%"
+                                                       aria-valuenow="{{ porcentaje_list }}"
+                                                       aria-valuemin="0"
+                                                       aria-valuemax="100">
+                                                      {{ porcentaje_list }}%
+                                                  </div>
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="{% url 'editMe' c.id %}" class="btn btn-info btn-xs"><i
+                                                <a href="{% url 'editMe' id %}" class="btn btn-info btn-xs"><i
                                                         class="fas fa-edit"></i>
                                                 </a>
-                                                <a href="{% url 'deleteMe' c.id %}" class="btn btn-danger btn-xs"><i
+                                                <a href="{% url 'deleteMe' id %}" class="btn btn-danger btn-xs"><i
                                                         class="fas fa-trash-alt"></i>
                                                 </a>
                                             </td>
                                         </tr>
+
                                     {% endfor %}
 
 
@@ -126,13 +132,7 @@
         </section>
     </div>
     <script type="application/javascript">
-        function move() {
-            let elem = document.getElementById("myBar");
-            let width = 10;
-            elem.style.width = width + '%';
-            document.getElementById("label").innerHTML = width ** 1 + '%';
 
-        }
     </script>
 
 {% endblock %}
