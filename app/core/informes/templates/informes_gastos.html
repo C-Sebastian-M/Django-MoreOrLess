@@ -1,7 +1,6 @@
 {% load static %}
+{% load humanize %}
 {% block content %}
-    <div class="card-body">
-        <div class="tab-content">
             <div class="tab-pane active" id="tab_1">
                 <section class="content">
                     <div class="container-fluid">
@@ -43,23 +42,23 @@
                                                                     <h3 class="card-title">Resumen</h3>
                                                                 </div>
                                                                 <!-- /.card-header -->
-                                                                <div class="card-body">
-                                                                    <table class="table table-responsive">
+                                                                <div class="card-body table-responsive p-0">
+                                                                    <table class="table table-head-fixed text-nowrap">
                                                                         <tr>
                                                                             <th>Ingresos</th>
                                                                             <td style="color: green;">
-                                                                                {{ presupuesto_t }}
+                                                                                {{ presupuesto_t| intcomma }}
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <th>Gastos</th>
                                                                             <td style="color: red;">
-                                                                                {{ gastos_t }}
+                                                                                {{ gastos_t | intcomma }}
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <th>Total</th>
-                                                                            <td>{{ restante }}</td>
+                                                                            <td>{{ restante | intcomma }}</td>
                                                                         </tr>
                                                                     </table>
                                                                 </div>
@@ -99,23 +98,23 @@
                                                                     <h3 class="card-title">Resumen</h3>
                                                                 </div>
                                                                 <!-- /.card-header -->
-                                                                <div class="card-body">
-                                                                    <table class="table table-responsive">
+                                                                <div class="card-body table-responsive p-0">
+                                                                    <table class="table table-head-fixed text-nowrap">
                                                                         <tr>
                                                                             <th>Ingresos</th>
                                                                             <td style="color: green;">
-                                                                                {{ presupuesto_t }}
+                                                                                {{ presupuesto_t | intcomma }}
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <th>Gastos</th>
                                                                             <td style="color: red;">
-                                                                                {{ gastos_t }}
+                                                                                {{ gastos_t | intcomma }}
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <th>Total</th>
-                                                                            <td>{{ restante }}</td>
+                                                                            <td>{{ restante | intcomma }}</td>
                                                                         </tr>
                                                                     </table>
                                                                 </div>
@@ -156,23 +155,23 @@
                                                                     <h3 class="card-title">Resumen</h3>
                                                                 </div>
                                                                 <!-- /.card-header -->
-                                                                <div class="card-body">
-                                                                    <table class="table table-responsive">
+                                                                <div class="card-body table-responsive p-0">
+                                                                    <table class="table table-head-fixed text-nowrap">
                                                                         <tr>
                                                                             <th>Ingresos</th>
                                                                             <td style="color: green;">
-                                                                                {{ presupuesto_t }}
+                                                                                {{ presupuesto_t | intcomma }}
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <th>Gastos</th>
                                                                             <td style="color: red;">
-                                                                                {{ gastos_t }}
+                                                                                {{ gastos_t | intcomma }}
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
                                                                             <th>Total</th>
-                                                                            <td>{{ restante }}</td>
+                                                                            <td>{{ restante | intcomma }}</td>
                                                                         </tr>
                                                                     </table>
                                                                 </div>
@@ -204,9 +203,7 @@
             <!-- /.tab-pane -->
             {% include 'informes_presupuesto.html' %}
             <!-- /.tab-pane -->
-        </div>
-        <!-- /.tab-content -->
-    </div>
+
     <!-- grafica anual -->
     <script type="application/javascript">
         // Build the chart

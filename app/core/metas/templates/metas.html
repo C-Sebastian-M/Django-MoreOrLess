@@ -73,44 +73,45 @@
                                         <th>Cantidad</th>
                                         <th>Inicio</th>
                                         <th>Fin</th>
-                                        <th>¿Lo conseguiste?</th>
+                                        <th>Progreso</th>
                                         <th>Opciones</th>
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    {% for id,fcm,categoria,date, amount,porcentaje_list in gastos %}
+                                    {% for c in object_list %}
 
                                         <tr>
-                                            <td>{{ categoria }}</td>
-                                            <td>${{ amount|intcomma }}</td>
-                                            <td>{{ date }}</td>
-                                            <td>{{ fcm }}</td>
+                                            <td>{{ c.category }}</td>
+                                            <td>${{ c.amount|intcomma }}</td>
+                                            <td>{{ c.date }}</td>
+                                            <td>{{ c.f_c_m }}</td>
                                             <td>
                                                 <div class="progress">
-                                                  <div class="progress-bar"
-                                                       role="progressbar"
-                                                       style="width: {{ porcentaje_list }}%"
-                                                       aria-valuenow="{{ porcentaje_list }}"
-                                                       aria-valuemin="0"
-                                                       aria-valuemax="100">
-                                                      {{ porcentaje_list }}%
-                                                  </div>
+                                                    <div class="progress-bar"
+                                                         role="progressbar"
+                                                         style="width: {{ porcentaje_list }}%"
+                                                         aria-valuenow=""
+                                                         aria-valuemin="0"
+                                                         aria-valuemax="100">
+                                                        %
+                                                    </div>
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="{% url 'editMe' id %}" class="btn btn-info btn-xs"><i
+                                                <a href="{% url 'editMe' c.id %}" class="btn btn-info btn-xs"><i
                                                         class="fas fa-edit"></i>
                                                 </a>
-                                                <a href="{% url 'deleteMe' id %}" class="btn btn-danger btn-xs"><i
+                                                <a href="{% url 'deleteMe' c.id %}" class="btn btn-danger btn-xs"><i
                                                         class="fas fa-trash-alt"></i>
+                                                </a>
+                                                <a href="{% url 'addMeAmount' c.id %}" class="btn btn-primary btn-xs"><i
+                                                        class="fas fa-plus"></i>
                                                 </a>
                                             </td>
                                         </tr>
 
                                     {% endfor %}
-
-
                                     </tbody>
                                 </table>
                             </div>
