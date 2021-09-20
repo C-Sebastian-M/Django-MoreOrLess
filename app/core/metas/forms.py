@@ -1,6 +1,5 @@
 from django.forms import *
-from core.metas.models import Metas
-from core.categorias.models import Categoria
+from core.metas.models import Metas, AmountMetas
 
 
 
@@ -49,14 +48,14 @@ class MetasForm(ModelForm):
 
 class MetaForm(ModelForm):
     class Meta:
-        model = Metas
-        fields = 'amount_meta',
+        model = AmountMetas
+        fields = 'amount',
         labels = {
-            'amount_meta' : 'Añadir dinero a la meta'
+            'amount' : 'Añadir dinero a la meta'
         }
 
         widgets = {
-            'amount_meta': TextInput(
+            'amount': TextInput(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ingrese el dinero a añadir a la meta',

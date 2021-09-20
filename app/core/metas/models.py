@@ -9,10 +9,19 @@ class Metas(models.Model):
     amount = models.FloatField('Monto', blank=True, default=None, null=True)
     category = models.ForeignKey(Categoria, blank=True, null=True, on_delete=models.CASCADE)
     date = models.DateField(auto_now=True, verbose_name='Fecha de inicio')
-    amount_meta = models.FloatField('Monto de meta', blank=True, null=True, default=None)
 
     class Meta:
         verbose_name = 'Meta'
         verbose_name_plural = 'Metas'
         db_table = 'meta'
+        ordering = ['id']
+
+class AmountMetas(models.Model):
+    amount = models.FloatField('Monto', blank=True, default=None, null=True)
+    meta = models.ForeignKey(Metas, blank=True, null=True, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'AmountMeta'
+        verbose_name_plural = 'AmountMetas'
+        db_table = 'AmountMeta'
         ordering = ['id']
