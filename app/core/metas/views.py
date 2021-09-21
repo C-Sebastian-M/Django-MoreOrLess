@@ -6,6 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from core.metas.forms import MetasForm, MetaForm
 from core.metas.models import Metas, AmountMetas
+from core.categorias.models import Categoria
+from django.db.models import FloatField, Sum
 
 
 # Create your views here.
@@ -16,13 +18,48 @@ class MetasListView(ListView):
     @method_decorator(csrf_exempt)
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-        self.object = None
+
         return super().dispatch(request, *args, **kwargs)
+
+    def metas(self):
+        valores_metas = Metas.objects.all()
+        Catego = Metas.objects.all().values_list('id', flat=True)
+        porcentaje = []
+        for c in Catego:
+            variable = AmountMetas.objects.filter(meta_id=c)
+            total = 0
+            for v in variable:
+                if v is None:
+                    continue
+                else:
+                    total+=v.amount
+            porcentaje.append(total)
+
+        id, gastos, category_id, f_c_m, date = [], [], [], [], []
+
+        for v in valores_metas:
+            id.append(v.id)
+            gastos.append(v.amount)
+            obj = Categoria.objects.get(pk=v.category_id)
+            category_id.append(obj)
+            f_c_m.append(v.f_c_m)
+            date.append(v.date)
+
+        barra = []
+        for i in range(len(gastos)):
+            barra.append(int(porcentaje[i]*100/gastos[i]))
+        print(barra)
+
+
+        metas = zip(id, gastos, category_id, f_c_m, date, barra)
+
+        return metas
+
 
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        """context['metas'] = self.metas()"""
+        context['metas'] = self.metas()
         return context
 
 
@@ -131,10 +168,9 @@ class AmountMetaCreateView(CreateView):
     def dispatch(self, request, *args, **kwargs):
         self.object = None
         model = self.kwargs['pk']
-        print(model)
-        form = self.model.meta
-        print(form)
+
         return super().dispatch(request, *args, **kwargs)
+
 
 
     def post(self, request, *args, **kwargs):
@@ -142,8 +178,10 @@ class AmountMetaCreateView(CreateView):
         try:
             action = request.POST['action']
             if action == 'add':
-                form = self.get_form()
-                data = form.save()
+                form = MetaForm(request.POST)
+                if form.is_valid():
+                    form.instance.meta_id = self.kwargs['pk']
+                    form.instance.save()
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:

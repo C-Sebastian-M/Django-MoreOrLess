@@ -50,9 +50,6 @@ class InformesListView(ListView):
             informe.presupuesto_id_id = v.id
             informe.semana = week(datetime(v.date.year, v.date.month, v.date.day))
             informe.save()
-
-
-
         self.porcentaje_gastos_semanales()
         return super().dispatch(request, *args, **kwargs)
 

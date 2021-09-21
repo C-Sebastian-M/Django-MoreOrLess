@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Trabajando en barra de progreso">
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Graficos de presupuesto y gastos añadidos, falta acomodar el filtro de fechas en las graficas de los informes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/informes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0002_auto_20210809_2122.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0003_alter_metas_amount.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0004_auto_20210817_1349.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0005_alter_metas_amount.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0006_auto_20210916_1638.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0007_remove_metas_porcentaje.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0008_metas_amount_meta.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0009_auto_20210920_1038.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0010_auto_20210920_1048.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/migrations/0011_rename_meta_id_amountmetas_meta.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/templates/metas.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/templates/metas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/metas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -176,11 +189,6 @@
       <workItem from="1631794777964" duration="10885000" />
       <workItem from="1631806084714" duration="108000" />
       <workItem from="1631812747332" duration="1537000" />
-      <workItem from="1631819215016" duration="5683000" />
-      <workItem from="1631829711663" duration="807000" />
-      <workItem from="1631892034173" duration="5044000" />
-      <workItem from="1632150189087" duration="7632000" />
-      <workItem from="1632189526903" duration="3558000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -336,21 +344,7 @@
       <option name="project" value="LOCAL" />
       <updated>1631224254585</updated>
     </task>
-    <task id="LOCAL-00023" summary="Trabajando en barra de progreso">
-      <created>1631896509674</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1631896509674</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Trabajando en barra de progreso">
-      <created>1632157833977</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1632157833978</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,8 +414,7 @@
     <MESSAGE value="Registro funcionando, falta solucionar redireccion cuando se finaliza el registro" />
     <MESSAGE value="Registro funcionando,decoradores funcionando, falta solucionar redireccion cuando se finaliza el registro, organizacion del proyecto aunque falta mayor organizacion en los HTML" />
     <MESSAGE value="Graficos de presupuesto y gastos añadidos, falta acomodar el filtro de fechas en las graficas de los informes." />
-    <MESSAGE value="Trabajando en barra de progreso" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trabajando en barra de progreso" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graficos de presupuesto y gastos añadidos, falta acomodar el filtro de fechas en las graficas de los informes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -46,7 +46,9 @@ class MetasForm(ModelForm):
             data['error'] = str(e)
         return data
 
+
 class MetaForm(ModelForm):
+
     class Meta:
         model = AmountMetas
         fields = 'amount',
