@@ -130,7 +130,12 @@ class AmountMetaCreateView(CreateView):
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = None
+        model = self.kwargs['pk']
+        print(model)
+        form = self.model.meta
+        print(form)
         return super().dispatch(request, *args, **kwargs)
+
 
     def post(self, request, *args, **kwargs):
         data = {}

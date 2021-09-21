@@ -20,6 +20,7 @@ class AmountMetas(models.Model):
     amount = models.FloatField('Monto', blank=True, default=None, null=True)
     meta = models.ForeignKey(Metas, blank=True, null=True, on_delete=models.CASCADE)
 
+
     class Meta:
         verbose_name = 'AmountMeta'
         verbose_name_plural = 'AmountMetas'
