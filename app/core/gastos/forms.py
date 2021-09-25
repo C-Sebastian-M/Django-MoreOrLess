@@ -3,10 +3,16 @@ from core.gastos.models import *
 
 
 class GastosForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop("user")
+        super(GastosForm, self).__init__(*args, **kwargs)
+        self.fields['category'].queryset =Categoria.objects.filter(user_creation_id=user)
+
     class Meta:
+
         model = Gastos
         fields = '__all__'
-        exclude = ('date','semana')
+        exclude = ('date','semana','user_creation',)
         labels = {
             'amount': 'Monto',
             'category': 'Categoria',

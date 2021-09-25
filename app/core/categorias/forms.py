@@ -5,6 +5,7 @@ class CategoriaForm(ModelForm):
     class Meta:
         model = Categoria
         fields = '__all__'
+        exclude = ('user_creation',)
         labels = {
             'category': 'Nueva categoria',
         }

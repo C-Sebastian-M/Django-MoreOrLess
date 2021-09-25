@@ -20,6 +20,10 @@ class GastosListView(ListView):
     model = Gastos
     template_name = 'gastos.html'
 
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
+
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
@@ -39,9 +43,10 @@ class GastosListView(ListView):
     def obtener_reporte_gastos_sem(self):
         year = datetime.now().year
         month = datetime.now().month
+        user = self.request.user
         data = []
         for w in range(1, 8):
-            dict_data = Gastos.objects.filter(date__year=year, date__month=month, date__week_day=w).aggregate(
+            dict_data = Gastos.objects.filter(user_creation= user,date__year=year, date__month=month, date__week_day=w).aggregate(
                 Sum('amount', output_field=FloatField()))
             if (dict_data['amount__sum'] == None):
                 data.append(0)
@@ -61,6 +66,16 @@ class GastosCreateView(CreateView):
     form_class = GastosForm
     template_name = 'form_gastos.html'
     success_url = reverse_lazy('gastos')
+
+    # Sending user object to the form, to verify which fields to display/remove (depending on group)
+    def get_form_kwargs(self):
+        kwargs = super(GastosCreateView, self).get_form_kwargs()
+        kwargs.update({'user': self.request.user.id})
+        return kwargs
+
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
 
     def post(self, request, *args, **kwargs):
         data = {}

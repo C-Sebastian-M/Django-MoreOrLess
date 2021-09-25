@@ -7,12 +7,13 @@ from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from core.categorias.forms import CategoriaForm
 from core.categorias.models import Categoria
 
-
-# Create your views here.
-
 class CategoriaListView(ListView):
     model = Categoria
     template_name = 'categorias.html'
+
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
 
     @method_decorator(csrf_exempt)
     @method_decorator(login_required)

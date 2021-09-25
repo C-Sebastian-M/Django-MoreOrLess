@@ -80,11 +80,6 @@ class PresupuestoCreateView(CreateView):
                 form = self.get_form()
                 data = form.save()
 
-                """informeP = informes()
-                informeP.presupuesto = form.cleaned_data.get('amount')
-                informeP.category = form.cleaned_data.get('category')
-                informeP.semana = week(datetime(datetime.now().year, datetime.now().month, datetime.now().day))
-                informeP.save()"""
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
