@@ -1,13 +1,19 @@
 from django.forms import *
 
+from core.categorias.models import Categoria
 from core.presupuesto.models import Presupuesto
 
 
 class PresupuestoForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop("user")
+        super(PresupuestoForm, self).__init__(*args, **kwargs)
+        self.fields['category'].queryset =Categoria.objects.filter(user_creation_id=user)
+
     class Meta:
         model = Presupuesto
         fields = '__all__'
-        exclude = ('date',)
+        exclude = ('date','user_creation',)
         labels = {
             'amount': 'Monto',
             'category': 'Categoria',

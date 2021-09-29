@@ -15,18 +15,25 @@ class MetasListView(ListView):
     model = Metas
     template_name = 'metas.html'
 
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
+
     @method_decorator(csrf_exempt)
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-
+        user = self.request.user
+        valores_meta = Metas.objects.filter(user_creation_id=user).aggregate(total_meta=Sum('amount'))
+        print(valores_meta)
         return super().dispatch(request, *args, **kwargs)
 
     def metas(self):
+        user = self.request.user
         valores_metas = Metas.objects.all()
         Catego = Metas.objects.all().values_list('id', flat=True)
         porcentaje = []
         for c in Catego:
-            variable = AmountMetas.objects.filter(meta_id=c)
+            variable = AmountMetas.objects.filter(user_creation_id=user, meta_id=c)
             total = 0
             for v in variable:
                 if v is None:
@@ -50,11 +57,8 @@ class MetasListView(ListView):
             barra.append(int(porcentaje[i]*100/gastos[i]))
         print(barra)
 
-
         metas = zip(id, gastos, category_id, f_c_m, date, barra)
-
         return metas
-
 
 
     def get_context_data(self, **kwargs):
@@ -68,6 +72,15 @@ class MetasCreateView(CreateView):
     form_class = MetasForm
     template_name = 'form_metas.html'
     success_url = reverse_lazy('metas')
+
+    def get_form_kwargs(self):
+        kwargs = super(MetasCreateView, self).get_form_kwargs()
+        kwargs.update({'user': self.request.user.id})
+        return kwargs
+
+    def get_queryset(self):
+        user = self.request.user
+        return super().get_queryset().filter(user_creation_id=user)
 
     @method_decorator(csrf_exempt)
     @method_decorator(login_required)

@@ -1,13 +1,19 @@
 from django.forms import *
+from core.categorias.models import Categoria
 from core.metas.models import Metas, AmountMetas
 
 
 
 class MetasForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop("user")
+        super(MetasForm, self).__init__(*args, **kwargs)
+        self.fields['category'].queryset =Categoria.objects.filter(user_creation_id=user)
+
     class Meta:
         model = Metas
         fields = '__all__'
-        exclude = ('date','amount_meta')
+        exclude = ('date','amount_meta', 'user_creation')
         labels = {
             'f_c_m': 'Fecha en la que deseas cumplir tu meta',
             'valor': 'Monto',

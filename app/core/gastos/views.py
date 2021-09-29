@@ -1,6 +1,7 @@
 from datetime import datetime
 import calendar
 
+from django.contrib.auth.decorators import login_required
 from django.db.models import FloatField, Sum
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
@@ -24,6 +25,7 @@ class GastosListView(ListView):
         user = self.request.user
         return super().get_queryset().filter(user_creation_id=user)
 
+    @method_decorator(login_required)
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
@@ -77,6 +79,12 @@ class GastosCreateView(CreateView):
         user = self.request.user
         return super().get_queryset().filter(user_creation_id=user)
 
+    @method_decorator(login_required)
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = None
+        return super().dispatch(request, *args, **kwargs)
+
     def post(self, request, *args, **kwargs):
         data = {}
         try:
@@ -105,6 +113,8 @@ class GastosUpdateView(UpdateView):
     template_name = 'form_gastos.html'
     success_url = reverse_lazy('gastos')
 
+    @method_decorator(login_required)
+    @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -135,6 +145,8 @@ class GastosDeleteView(DeleteView):
     template_name = 'delete_gastos.html'
     success_url = reverse_lazy('gastos')
 
+    @method_decorator(login_required)
+    @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

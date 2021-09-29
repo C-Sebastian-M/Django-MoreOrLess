@@ -15,10 +15,9 @@ class CategoriaListView(ListView):
         user = self.request.user
         return super().get_queryset().filter(user_creation_id=user)
 
-    @method_decorator(csrf_exempt)
     @method_decorator(login_required)
+    @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
-        self.object = None
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):

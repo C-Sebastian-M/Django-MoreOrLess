@@ -1,9 +1,10 @@
 from django.db import models
 from crum import get_current_user
-# Create your models here.
 from django.forms import model_to_dict
 from core.models import BaseModel
 from core.categorias.models import Categoria
+
+# Create your models here.
 
 
 class Gastos(BaseModel):
@@ -20,6 +21,7 @@ class Gastos(BaseModel):
             self.modified_by = user
 
         super(Gastos, self).save()
+
     # def __str__(self):
     # return self.date
 
