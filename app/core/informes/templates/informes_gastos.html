@@ -1,208 +1,176 @@
 {% load static %}
 {% load humanize %}
 {% block content %}
-            <div class="tab-pane active" id="tab_1">
-                <section class="content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <!-- DONUT CHART -->
-                            <div class="card-dark col-12">
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <!-- Main content -->
-                                    <section class="content">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <!-- AREA CHART -->
-                                                    <div class="card card-primary">
-                                                        <div class="card-header">
-                                                            <h3 class="card-title">Semanal</h3>
-                                                        </div>
-
-                                                        <!-- /.card-body -->
-                                                        <div class="card-body">
-                                                            <div class="chart">
-                                                                <div class="chartjs-size-monitor">
-                                                                    <div class="chartjs-size-monitor-expand">
-                                                                        <div class=""></div>
-                                                                    </div>
-                                                                    <div class="chartjs-size-monitor-shrink">
-                                                                        <div class=""></div>
-                                                                    </div>
-                                                                </div>
-                                                                <figure class="highcharts-figure">
-                                                                    <div id="container-sem"></div>
-                                                                    <p class="highcharts-description">
-                                                                    </p>
-                                                                </figure>
-                                                            </div>
-                                                            <div class="card">
-                                                                <div class="card-header">
-                                                                    <h3 class="card-title">Resumen</h3>
-                                                                </div>
-                                                                <!-- /.card-header -->
-                                                                <div class="card-body table-responsive p-0">
-                                                                    <table class="table table-head-fixed text-nowrap">
-                                                                        <tr>
-                                                                            <th>Ingresos</th>
-                                                                            <td style="color: green;">
-                                                                                {{ presupuesto_t| intcomma }}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>Gastos</th>
-                                                                            <td style="color: red;">
-                                                                                {{ gastos_t | intcomma }}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>Total</th>
-                                                                            <td>{{ restante | intcomma }}</td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <!-- /.card-body -->
-                                                    </div>
-                                                    <!-- /.card -->
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <!-- AREA CHART -->
-                                                    <div class="card card-dark">
-                                                        <div class="card-header">
-                                                            <h3 class="card-title">Mensual</h3>
-                                                        </div>
-
-                                                        <!-- /.card-body -->
-                                                        <div class="card-body">
-                                                            <div class="chart">
-                                                                <div class="chartjs-size-monitor">
-                                                                    <div class="chartjs-size-monitor-expand">
-                                                                        <div class=""></div>
-                                                                    </div>
-                                                                    <div class="chartjs-size-monitor-shrink">
-                                                                        <div class=""></div>
-                                                                    </div>
-                                                                </div>
-                                                                <figure class="highcharts-figure">
-                                                                    <div id="container-mens"></div>
-                                                                    <p class="highcharts-description">
-                                                                    </p>
-                                                                </figure>
-                                                            </div>
-                                                            <div class="card">
-                                                                <div class="card-header">
-                                                                    <h3 class="card-title">Resumen</h3>
-                                                                </div>
-                                                                <!-- /.card-header -->
-                                                                <div class="card-body table-responsive p-0">
-                                                                    <table class="table table-head-fixed text-nowrap">
-                                                                        <tr>
-                                                                            <th>Ingresos</th>
-                                                                            <td style="color: green;">
-                                                                                {{ presupuesto_t | intcomma }}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>Gastos</th>
-                                                                            <td style="color: red;">
-                                                                                {{ gastos_t | intcomma }}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>Total</th>
-                                                                            <td>{{ restante | intcomma }}</td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <!-- /.card-body -->
-                                                    </div>
-                                                    <!-- /.card -->
-                                                </div>
-                                                <!-- /.col (LEFT) -->
-                                                <div class="col-md-6">
-                                                    <!-- AREA CHART -->
-                                                    <div class="card card-yellow">
-                                                        <div class="card-header">
-                                                            <h3 class="card-title">Anual</h3>
-                                                        </div>
-
-                                                        <!-- /.card-body -->
-                                                        <div class="card-body">
-                                                            <div class="chart">
-                                                                <div class="chartjs-size-monitor">
-                                                                    <div class="chartjs-size-monitor-expand">
-                                                                        <div class=""></div>
-                                                                    </div>
-                                                                    <div class="chartjs-size-monitor-shrink">
-                                                                        <div class=""></div>
-                                                                    </div>
-                                                                </div>
-                                                                <figure class="highcharts-figure">
-                                                                    <div id="container-year"></div>
-                                                                    <p class="highcharts-description">
-                                                                    </p>
-                                                                </figure>
-                                                            </div>
-                                                            <div class="card">
-                                                                <div class="card-header">
-                                                                    <h3 class="card-title">Resumen</h3>
-                                                                </div>
-                                                                <!-- /.card-header -->
-                                                                <div class="card-body table-responsive p-0">
-                                                                    <table class="table table-head-fixed text-nowrap">
-                                                                        <tr>
-                                                                            <th>Ingresos</th>
-                                                                            <td style="color: green;">
-                                                                                {{ presupuesto_t | intcomma }}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>Gastos</th>
-                                                                            <td style="color: red;">
-                                                                                {{ gastos_t | intcomma }}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>Total</th>
-                                                                            <td>{{ restante | intcomma }}</td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- /.card-body -->
-                                                    </div>
-                                                    <!-- /.card -->
-                                                </div>
-
-                                                <!-- /.col (RIGHT) -->
-                                            </div>
-                                            <!-- /.row -->
-                                        </div>
-                                        <!-- /.container-fluid -->
-                                    </section>
-                                    <!-- /.content -->
-                                </div>
-                                <!-- /.card-body -->
+    <div class="tab-pane active" id="tab_1">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Aqui estan las graficas de la izquierda-->
+                    <div class="col-md-6">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Semanal</h3>
                             </div>
-                            <!-- /.card -->
+
+                            <!-- /.card-body -->
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <figure class="highcharts-figure">
+                                        <div id="container-sem"></div>
+                                        <p class="highcharts-description">
+                                        </p>
+                                    </figure>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Resumen</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body table-responsive p-0">
+                                        <table class="table table-head-fixed text-nowrap">
+                                            <tr>
+                                                <th>Ingresos</th>
+                                                <td style="color: green;">
+                                                    {{ presupuesto_t| intcomma }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gastos</th>
+                                                <td style="color: red;">
+                                                    {{ gastos_t | intcomma }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total</th>
+                                                <td>{{ restante | intcomma }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-                        <!-- /.row -->
+                        <div class="card card-yellow">
+                            <div class="card-header">
+                                <h3 class="card-title">Anual</h3>
+                            </div>
+
+                            <!-- /.card-body -->
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <figure class="highcharts-figure">
+                                        <div id="container-year"></div>
+                                        <p class="highcharts-description">
+                                        </p>
+                                    </figure>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Resumen</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body table-responsive p-0">
+                                        <table class="table table-head-fixed text-nowrap">
+                                            <tr>
+                                                <th>Ingresos</th>
+                                                <td style="color: green;">
+                                                    {{ presupuesto_t | intcomma }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gastos</th>
+                                                <td style="color: red;">
+                                                    {{ gastos_t | intcomma }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total</th>
+                                                <td>{{ restante | intcomma }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
                     </div>
-                    <!-- /.container-fluid -->
-                </section>
-                <!-- /.content -->
+                    <!-- Aqui estan las graficas de la derecha-->
+                    <div class="col-md-6">
+                        <div class="card card-dark">
+                            <div class="card-header">
+                                <h3 class="card-title">Mensual</h3>
+                            </div>
+
+                            <!-- /.card-body -->
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <figure class="highcharts-figure">
+                                        <div id="container-mens"></div>
+                                        <p class="highcharts-description">
+                                        </p>
+                                    </figure>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Resumen</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body table-responsive p-0">
+                                        <table class="table table-head-fixed text-nowrap">
+                                            <tr>
+                                                <th>Ingresos</th>
+                                                <td style="color: green;">
+                                                    {{ presupuesto_t | intcomma }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gastos</th>
+                                                <td style="color: red;">
+                                                    {{ gastos_t | intcomma }}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total</th>
+                                                <td>{{ restante | intcomma }}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.tab-pane -->
-            {% include 'informes_presupuesto.html' %}
-            <!-- /.tab-pane -->
+        </section>
+    </div>
+    {% include 'informes_presupuesto.html' %}
 
     <!-- grafica anual -->
     <script type="application/javascript">

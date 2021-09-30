@@ -14,7 +14,6 @@ from core.presupuesto.models import Presupuesto
 from core.informes.models import informes
 
 
-
 # Create your views here.
 
 def week(dt):

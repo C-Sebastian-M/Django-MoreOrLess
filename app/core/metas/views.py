@@ -23,10 +23,30 @@ class MetasListView(ListView):
     @method_decorator(csrf_exempt)
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-        user = self.request.user
-        valores_meta = Metas.objects.filter(user_creation_id=user).aggregate(total_meta=Sum('amount'))
-        print(valores_meta)
         return super().dispatch(request, *args, **kwargs)
+
+    def ahorro_dia(self):
+        user = self.request.user
+        valores_dia = Metas.objects.filter(user_creation_id=user).aggregate(total_meta=Sum('amount'))
+        valores_dia = valores_dia['total_meta']
+        if valores_dia is None:
+            valores_dia = 0
+            return valores_dia
+        else:
+            tot = valores_dia / 31
+            return tot
+
+    def ahorro_men(self):
+        user = self.request.user
+        valores = Metas.objects.filter(user_creation_id=user).aggregate(total_meta=Sum('amount'))
+        valores = valores['total_meta']
+        if valores is None:
+            valores = 0
+            return valores
+        else:
+            tot = valores / 12
+            return tot
+
 
     def metas(self):
         user = self.request.user
@@ -65,6 +85,8 @@ class MetasListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['metas'] = self.metas()
+        context['ahorro_dia'] = self.ahorro_dia()
+        context['ahorro_men'] = self.ahorro_men()
         return context
 
 

@@ -24,7 +24,6 @@ def week(dt):
 
 # Create your views here.
 
-
 class InformesListView(ListView):
     model = informes
     template_name = 'informes.html'

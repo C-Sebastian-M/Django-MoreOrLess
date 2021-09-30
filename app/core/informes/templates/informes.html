@@ -25,18 +25,24 @@
             <!-- Aqui va toda la info del main -->
             <div class="content">
                 <div class="container">
+
                     <div class="card-header d-flex p-0">
                         <h3 class="card-title p-3">Gráficos</h3>
                         <ul class="nav nav-pills ml-auto p-2">
                             <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">Gastos</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">Presupuesto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#tab_2" data-toggle="tab">Presupuesto</a>
+                            </li>
                         </ul>
                     </div>
-                    <!-- /.card-header -->
-                    {% include 'informes_gastos.html' %}
+                    <div class="card-body">
+                        <div class="tab-content">
+                            {% include 'informes_gastos.html' %}
+                        </div>
+                    </div>
                 </div>
                 <!-- /.card-body -->
+
             </div>
         </div>
     </div><!-- /.content-wrapper -->
