@@ -1,0 +1,56 @@
+{% extends 'form.html' %}
+{% load widget_tweaks %}
+{% load static %}
+{% block content %}
+
+    <div class="content-wrapper" style="min-height: 2000px;">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- Default box -->
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-5 text-center d-flex align-items-center justify-content-center">
+                        <div class="">
+                            <img class="product-image" src="{% static 'img/logo.png' %}">
+                        </div>
+                    </div>
+                    <form method="post" action="{% url 'contactenos' %}">
+                        {% csrf_token %}
+
+                        {% if 'ok' in request.GET %}
+                            <p style="text-align: center">
+                                <b>Su mensaje se ha enviado correctamente, gracias por ayudarnos a mejorar.</b>
+                            </p>
+                        {% endif %}
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="inputName">Name</label>
+                                {{ form.name | add_class:'form-control' }}
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">E-Mail</label>
+                                {{ form.email | add_class:'form-control' }}
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMessage">Message</label>
+                                {{ form.message | add_class:'form-control' }}
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" value="Send message">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <!-- /.content -->
+    </div>
+{% endblock %}
