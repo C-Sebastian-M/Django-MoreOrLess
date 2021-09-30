@@ -1,5 +1,6 @@
 from datetime import datetime
 import calendar
+from crum import get_current_user
 
 from django.contrib.auth.decorators import login_required
 from django.db.models import FloatField, Sum
@@ -36,8 +37,8 @@ class InformesListView(ListView):
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         informes.objects.all().delete()
-        valores_gastos = Gastos.objects.all()
-        valores_presupesto = Presupuesto.objects.all()
+        valores_gastos = Gastos.objects.filter(user_creation_id=get_current_user())
+        valores_presupesto = Presupuesto.objects.filter(user_creation_id=get_current_user())
 
         for v in valores_gastos:
             informe = informes()
@@ -45,6 +46,7 @@ class InformesListView(ListView):
             informe.category_id = v.category_id
             informe.gastos_id_id = v.id
             informe.semana =week(datetime(v.date.year, v.date.month, v.date.day))
+            #informe.user_creation = get_current_user()
             informe.save()
 
         for v in valores_presupesto:
@@ -53,6 +55,7 @@ class InformesListView(ListView):
             informe.category_id = v.category_id
             informe.presupuesto_id_id = v.id
             informe.semana = week(datetime(v.date.year, v.date.month, v.date.day))
+            #informe.user_creation = get_current_user()
             informe.save()
         self.porcentaje_gastos_semanales()
         return super().dispatch(request, *args, **kwargs)

@@ -1,4 +1,5 @@
 from datetime import datetime
+from datetime import timedelta
 import calendar
 
 from django.contrib.auth.decorators import login_required
@@ -46,9 +47,13 @@ class GastosListView(ListView):
         year = datetime.now().year
         month = datetime.now().month
         user = self.request.user
+        date = datetime.now().today()
+        start_week = date - timedelta(date.weekday())
+        end_week = start_week + timedelta(7)
         data = []
         for w in range(1, 8):
-            dict_data = Gastos.objects.filter(user_creation= user,date__year=year, date__month=month, date__week_day=w).aggregate(
+            dict_data = Gastos.objects.filter(user_creation= user,date__year=year, date__month=month,
+                                              date__range=[start_week, end_week], date__week_day=w).aggregate(
                 Sum('amount', output_field=FloatField()))
             if (dict_data['amount__sum'] == None):
                 data.append(0)

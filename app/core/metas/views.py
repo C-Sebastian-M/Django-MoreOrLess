@@ -8,6 +8,7 @@ from core.metas.forms import MetasForm, MetaForm
 from core.metas.models import Metas, AmountMetas
 from core.categorias.models import Categoria
 from django.db.models import FloatField, Sum
+from crum import get_current_user
 
 
 # Create your views here.
@@ -29,7 +30,7 @@ class MetasListView(ListView):
 
     def metas(self):
         user = self.request.user
-        valores_metas = Metas.objects.all()
+        valores_metas = Metas.objects.filter(user_creation_id=get_current_user())
         Catego = Metas.objects.all().values_list('id', flat=True)
         porcentaje = []
         for c in Catego:
