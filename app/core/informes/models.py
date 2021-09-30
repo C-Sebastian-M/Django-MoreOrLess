@@ -1,9 +1,11 @@
+from crum import get_current_user
 from django.db import models
 from django.forms import model_to_dict
 from core.categorias.models import Categoria
 from core.models import BaseModel
 from core.presupuesto.models import Presupuesto
 from core.gastos.models import Gastos
+
 
 # Create your models here.
 
@@ -17,15 +19,15 @@ class informes(BaseModel):
     semana = models.FloatField('semana', blank=True, default=None, null=True)
     category = models.ForeignKey(Categoria, blank=True, null=True, on_delete=models.CASCADE)
 
-    """def save(self, force_insert=False, force_update=False, usig=None,
-                 update_fields=None):
-            user = get_current_user()
-            if user is not None:
-                if not self.pk:
-                    self.user_creation = user
-                self.modified_by = user
+    def save(self, force_insert=False, force_update=False, usig=None,
+             update_fields=None):
+        user = get_current_user()
+        if user is not None:
+            if not self.pk:
+                self.user_creation = user
+            self.modified_by = user
 
-            super(Categoria, self).save()"""
+        super(informes, self).save()
 
     def toJson(self):
         item = model_to_dict(self)
@@ -35,4 +37,3 @@ class informes(BaseModel):
         verbose_name = 'Informe'
         verbose_name_plural = 'Informes'
         db_table = 'informe'
-

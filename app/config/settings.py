@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'core.categorias',
     'core.login',
     'core.registro',
+    'core.contactenos',
     'django.contrib.humanize',
     # Libs
     'widget_tweaks',
@@ -138,6 +139,19 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configurar en gmail recibir correos de terceros
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+# Especificar el protocolo de seguridad que utiliza el servidor de correo, puerto que corresponda \
+# segun la configuracion de gmail ya sea TLS o SSL
+EMAIL_USE_TLS = True
+# Puerto para envio de correos electronicos, dependiendo del protocolo el colocado es el de el TLS
+EMAIL_PORT = 587
+# Usuario y contraseña del correo electronico
+EMAIL_HOST_USER = "moreorless.project@gmail.com"
+EMAIL_HOST_PASSWORD = "moreorless3"
+
 
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 

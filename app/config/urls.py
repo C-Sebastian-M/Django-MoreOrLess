@@ -30,5 +30,6 @@ urlpatterns = [
     path('', include('core.informes.urls')),
     path('', include('core.perfil.urls')),
     path('', include('core.categorias.urls')),
+    path('', include('core.contactenos.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,7 +1,6 @@
 {% extends 'list.html' %}
 {% block columns %}
     <tr>
-        <th>Nro.</th>
         <th>Categoria</th>
         <th>Opciones</th>
 
@@ -11,7 +10,6 @@
 
     {% for c in object_list %}
         <tr>
-            <td>{{ c.id }}</td>
             <td>{{ c.category }}</td>
             <td>
                 <a href="{% url 'editCat' c.id %}" class="btn btn-info btn-xs"><i class="fas fa-edit"></i>
