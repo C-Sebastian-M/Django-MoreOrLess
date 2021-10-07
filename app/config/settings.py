@@ -172,3 +172,5 @@ JAZZMIN_SETTINGS = {
     'site_header': 'More or Less',
     'site_logo': 'app/static/img/logo3.png',
 }
+
+DOMAIN: ''

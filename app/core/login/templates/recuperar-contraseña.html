@@ -1,0 +1,95 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block body %}
+<body class="hold-transition login-page body-more">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="{% url 'login' %}"><b>More or</b> Less</a>
+    </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Estás a solo un paso de tu nueva contraseña, recupera tu contraseña ahora.</p>
+
+      <form  method="post">
+        <div class="input-group mb-3">
+            {{ form.password }}
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+            {{ form.confirmPassword }}
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block">Cambiar contraseña</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <p class="mt-3 mb-1">
+        <a href="{% url 'login' %}">Iniciar sesión</a>
+      </p>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+<script type="application/javascript">
+    $('form').on('submit', function (e) {
+            e.preventDefault();
+            var parameters = $(this).serializeArray();
+            console.log(parameters)
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: parameters,
+                dataType: 'json'
+            }).done(function (data) {
+                console.log(data);
+                if (!data.hasOwnProperty('error')) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Notificación',
+                        text: 'Se ha cambiado la contraseña correctamente',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        onClose: () => {
+                            location.href = '{{ list_url }}'
+                        }
+                    })
+                    return false;
+                }
+                message_error(data.error);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+
+        });
+
+    </script>
+<!-- jQuery -->
+    <script src="{% static 'lib/adminlte/plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'lib/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js' %}."></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'lib/adminlte/dist/js/adminlte.min.js' %}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{% static 'lib/adminlte/dist/js/demo.js' %}"></script>
+    <script src="{% static 'lib/jquery-3.6.0.min.js' %}"></script>
+</body>
+{% endblock %}
+
+

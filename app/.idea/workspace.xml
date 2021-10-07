@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="proyecto terminado (Subirlo a Pythonanywhere y agg contacto)">
-      <change afterPath="$PROJECT_DIR$/core/categorias/migrations/0006_alter_categoria_user_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/contactenos/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/gastos/migrations/0023_alter_gastos_user_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/informes/migrations/0012_alter_informes_user_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/metas/migrations/0003_auto_20210930_1544.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0008_contactus.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0009_delete_contactus.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/presupuesto/migrations/0008_alter_presupuesto_user_creation.py" afterDir="false" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="proyecto terminado">
+      <change afterPath="$PROJECT_DIR$/core/login/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/login/templates/olvido-contraseña.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/login/templates/send_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/registro/migrations/0006_registrousuario_token.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/DESCRIPTION.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib-0.1.1.dist-info/zip-safe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/Lib/site-packages/secure_smtplib/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/templates/list_categorias.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/templates/list_categorias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/informes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/forgot-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/recover-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/recuperar-contraseña.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +101,11 @@
       <recent name="C:\Users\topas\OneDrive\Escritorio\Curso Django\proyecto_sena\Django-MoreOrLess\app\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\MORE OR LESS 2\Django-MoreOrLess\app\core\login\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\MORE OR LESS 2\Django-MoreOrLess\app\core" />
       <recent name="C:\project\Django-MoreOrLess\app\core\login\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\registro\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\homepage\templates" />
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core" />
     </key>
   </component>
   <component name="RunManager">
@@ -201,7 +202,11 @@
       <workItem from="1632589257598" duration="1017000" />
       <workItem from="1633022215267" duration="1935000" />
       <workItem from="1633024606265" duration="8112000" />
-      <workItem from="1633034769588" duration="639000" />
+      <workItem from="1633034769588" duration="2798000" />
+      <workItem from="1633100532848" duration="712000" />
+      <workItem from="1633471341935" duration="771000" />
+      <workItem from="1633556438523" duration="12658000" />
+      <workItem from="1633616437264" duration="1080000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -364,7 +369,28 @@
       <option name="project" value="LOCAL" />
       <updated>1633028307140</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="proyecto terminado">
+      <created>1633035487212</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1633035487212</updated>
+    </task>
+    <task id="LOCAL-00025" summary="proyecto terminado">
+      <created>1633035513899</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1633035513899</updated>
+    </task>
+    <task id="LOCAL-00026" summary="proyecto terminado">
+      <created>1633035674016</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1633035674016</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +461,8 @@
     <MESSAGE value="Registro funcionando,decoradores funcionando, falta solucionar redireccion cuando se finaliza el registro, organizacion del proyecto aunque falta mayor organizacion en los HTML" />
     <MESSAGE value="Graficos de presupuesto y gastos añadidos, falta acomodar el filtro de fechas en las graficas de los informes." />
     <MESSAGE value="proyecto terminado (Subirlo a Pythonanywhere y agg contacto)" />
-    <option name="LAST_COMMIT_MESSAGE" value="proyecto terminado (Subirlo a Pythonanywhere y agg contacto)" />
+    <MESSAGE value="proyecto terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="proyecto terminado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
