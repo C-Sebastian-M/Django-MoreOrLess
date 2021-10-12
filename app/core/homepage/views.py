@@ -11,7 +11,7 @@ class IndexView(TemplateView):
     @method_decorator(csrf_exempt)
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
-        self.object = self
+        self.object = None
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):

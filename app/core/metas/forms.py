@@ -1,4 +1,4 @@
-from django.forms import *
+from django.forms import ModelForm, DateInput, Select, TextInput
 from core.categorias.models import Categoria
 from core.metas.models import Metas, AmountMetas
 

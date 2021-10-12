@@ -15,7 +15,6 @@ class Categoria(BaseModel):
             if not self.pk:
                 self.user_creation = user
             self.modified_by = user
-
         super(Categoria, self).save()
 
     def __str__(self):
@@ -23,7 +22,6 @@ class Categoria(BaseModel):
 
     def toJson(self):
         item = model_to_dict(self)
-
         return item
 
     class Meta:

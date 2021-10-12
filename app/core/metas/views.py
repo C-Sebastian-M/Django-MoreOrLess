@@ -50,7 +50,7 @@ class MetasListView(ListView):
 
     def metas(self):
         user = self.request.user
-        valores_metas = Metas.objects.filter(user_creation_id=get_current_user())
+        valores_metas = Metas.objects.filter(user_creation_id=user)
         Catego = Metas.objects.all().values_list('id', flat=True)
         porcentaje = []
         for c in Catego:
@@ -203,8 +203,6 @@ class AmountMetaCreateView(CreateView):
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = None
-        model = self.kwargs['pk']
-
         return super().dispatch(request, *args, **kwargs)
 
 
