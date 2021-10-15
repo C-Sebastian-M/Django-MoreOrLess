@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="proyecto terminado">
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+    <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Graficos de presupuesto y gastos añadidos, falta acomodar el filtro de fechas en las graficas de los informes.">
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gastos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/informes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/informes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/informes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/presupuesto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +97,11 @@
       <recent name="C:\Users\topas\OneDrive\Escritorio\Curso Django\proyecto_sena\Django-MoreOrLess\app\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\MORE OR LESS 2\Django-MoreOrLess\app\core\login\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\MORE OR LESS 2\Django-MoreOrLess\app\core" />
       <recent name="C:\project\Django-MoreOrLess\app\core\login\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\registro\templates" />
       <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core\homepage\templates" />
+      <recent name="C:\Users\Familia Barrero\Desktop\Oscar\proyectos\new\Django-MoreOrLess\app\core" />
     </key>
   </component>
   <component name="RunManager">
@@ -180,16 +198,8 @@
       <workItem from="1632589257598" duration="1017000" />
       <workItem from="1633022215267" duration="1935000" />
       <workItem from="1633024606265" duration="8112000" />
-      <workItem from="1633034769588" duration="2798000" />
-      <workItem from="1633100532848" duration="712000" />
-      <workItem from="1633471341935" duration="771000" />
-      <workItem from="1633556438523" duration="12658000" />
-      <workItem from="1633616437264" duration="3707000" />
-      <workItem from="1633719645642" duration="2248000" />
-      <workItem from="1633995835082" duration="2905000" />
-      <workItem from="1634047749920" duration="5987000" />
-      <workItem from="1634242377691" duration="5056000" />
-      <workItem from="1634316746544" duration="1803000" />
+      <workItem from="1633034769588" duration="639000" />
+      <workItem from="1634320217351" duration="10346000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -352,56 +362,7 @@
       <option name="project" value="LOCAL" />
       <updated>1633028307140</updated>
     </task>
-    <task id="LOCAL-00024" summary="proyecto terminado">
-      <created>1633035487212</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1633035487212</updated>
-    </task>
-    <task id="LOCAL-00025" summary="proyecto terminado">
-      <created>1633035513899</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1633035513899</updated>
-    </task>
-    <task id="LOCAL-00026" summary="proyecto terminado">
-      <created>1633035674016</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1633035674016</updated>
-    </task>
-    <task id="LOCAL-00027" summary="proyecto terminado">
-      <created>1633622295781</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1633622295781</updated>
-    </task>
-    <task id="LOCAL-00028" summary="proyecto terminado">
-      <created>1633720794029</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1633720794029</updated>
-    </task>
-    <task id="LOCAL-00029" summary="proyecto terminado">
-      <created>1634055306926</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1634055306926</updated>
-    </task>
-    <task id="LOCAL-00030" summary="proyecto terminado">
-      <created>1634318204683</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1634318204683</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,8 +433,7 @@
     <MESSAGE value="Registro funcionando,decoradores funcionando, falta solucionar redireccion cuando se finaliza el registro, organizacion del proyecto aunque falta mayor organizacion en los HTML" />
     <MESSAGE value="Graficos de presupuesto y gastos añadidos, falta acomodar el filtro de fechas en las graficas de los informes." />
     <MESSAGE value="proyecto terminado (Subirlo a Pythonanywhere y agg contacto)" />
-    <MESSAGE value="proyecto terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="proyecto terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="proyecto terminado (Subirlo a Pythonanywhere y agg contacto)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

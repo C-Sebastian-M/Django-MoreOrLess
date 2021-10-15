@@ -122,15 +122,16 @@ class MetasListView(ListView):
         context['ahorro_men'] = self.ahorro_men()
         return context
 
-#Vista del formulario para ingresar información a la base de datos
+
+# Vista del formulario para ingresar información a la base de datos
 class MetasCreateView(CreateView):
-    #Especificamos el modelo al cual se le agregara la información
+    # Especificamos el modelo al cual se le agregara la información
     model = Metas
-    #Especificamos el formulario
+    # Especificamos el formulario
     form_class = MetasForm
-    #Plantilla del front end
+    # Plantilla del front end
     template_name = 'form_metas.html'
-    #Url de redirección al completar el formulario
+    # Url de redirección al completar el formulario
     success_url = reverse_lazy('metas')
 
     def get_form_kwargs(self):
@@ -138,27 +139,26 @@ class MetasCreateView(CreateView):
         kwargs.update({'user': self.request.user.id})
         return kwargs
 
-    #Obtenemos la información del usuario, filtrando por el mismo
+    # Obtenemos la información del usuario, filtrando por el mismo
     def get_queryset(self):
         user = self.request.user
         return super().get_queryset().filter(user_creation_id=user)
 
-    #Metodo de seguridad
+    # Metodo de seguridad
     @method_decorator(csrf_exempt)
-    #Metodo de requerimiento de logeo
+    # Metodo de requerimiento de logeo
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = None
         return super().dispatch(request, *args, **kwargs)
 
-    #Metodo post para guardar la información del formulario
+    # Metodo post para guardar la información del formulario
     def post(self, request, *args, **kwargs):
         data = {}
         try:
             action = request.POST['action']
             if action == 'add':
                 form = self.get_form()
-
                 data = form.save()
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
@@ -173,7 +173,8 @@ class MetasCreateView(CreateView):
         context['action'] = 'add'
         return context
 
-#Vista del formulario para actualizar información de la base de datos
+
+# Vista del formulario para actualizar información de la base de datos
 class MetasUpdateView(UpdateView):
     # Especificamos el modelo al cual se le actualizara la información
     model = Metas
@@ -184,15 +185,15 @@ class MetasUpdateView(UpdateView):
     # Url de redirección al completar el formulario
     success_url = reverse_lazy('metas')
 
-    #Metodo de seguridad
+    # Metodo de seguridad
     @method_decorator(csrf_exempt)
-    #Metodo de requerimiento de logeo
+    # Metodo de requerimiento de logeo
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
 
-    #Metodo post de guardado de información
+    # Metodo post de guardado de información
     def post(self, request, *args, **kwargs):
         data = {}
         try:
@@ -214,7 +215,8 @@ class MetasUpdateView(UpdateView):
 
         return context
 
-#Vista del formulario para eliminar información de la base de datos
+
+# Vista del formulario para eliminar información de la base de datos
 class MetasDeleteView(DeleteView):
     # Especificamos el modelo al cual se le eliminara la información
     model = Metas
@@ -223,15 +225,15 @@ class MetasDeleteView(DeleteView):
     # Url de redirección al autorizar la acción
     success_url = reverse_lazy('metas')
 
-    #Metodo de seguridad
+    # Metodo de seguridad
     @method_decorator(csrf_exempt)
-    #Metodo de requerimiento de logeo
+    # Metodo de requerimiento de logeo
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
 
-    #Metodo post de borrado de la informacion
+    # Metodo post de borrado de la informacion
     def post(self, request, *args, **kwargs):
         data = {}
         try:
@@ -246,26 +248,27 @@ class MetasDeleteView(DeleteView):
         context['list_url'] = reverse_lazy('metas')
         return context
 
-#Vista del formulario de Amount, para ingresar información del progreso de las metas
+
+# Vista del formulario de Amount, para ingresar información del progreso de las metas
 class AmountMetaCreateView(CreateView):
-    #Especificamos el modelo al cual se le ingresara la información
+    # Especificamos el modelo al cual se le ingresara la información
     model = AmountMetas
-    #Especificamos el formulario
+    # Especificamos el formulario
     form_class = MetaForm
-    #Plantilla html del front end
+    # Plantilla html del front end
     template_name = 'form_metas.html'
-    #Url de redirección al completar el formulario
+    # Url de redirección al completar el formulario
     success_url = reverse_lazy('metas')
 
-    #Metodo de seguridad
+    # Metodo de seguridad
     @method_decorator(csrf_exempt)
-    #Metodo de requerimiento del logeo
+    # Metodo de requerimiento del logeo
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = None
         return super().dispatch(request, *args, **kwargs)
 
-    #Metodo post para guardar la información
+    # Metodo post para guardar la información
     def post(self, request, *args, **kwargs):
         data = {}
         try:
