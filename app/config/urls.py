@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from core.homepage.views import IndexView
 
-
+#Urls que estamos utilizando para nuestro aplicativo según las plicaciones que tenemos
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name="index"),

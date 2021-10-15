@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#Aplicaciones que estamos trabajando para nuestro proyecto
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -53,7 +54,7 @@ INSTALLED_APPS = [
     # Libs
     'widget_tweaks',
 ]
-
+#Seguridad que nos brinda Django
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -87,7 +88,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+#Configuración de nuestra base de datos
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -129,8 +130,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+#Especificación de la url donde estan nuestros archivos estaticos
 STATIC_URL = '/static/'
 
+#El nombre de la carpeta
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
@@ -152,21 +155,28 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = "moreorless.project@gmail.com"
 EMAIL_HOST_PASSWORD = "moreorless3"
 
-
+# Formato de los input tipo fecha
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
+#Redirección del logeo
 LOGIN_REDIRECT_URL = 'index'
 
+#Redirección de la salida del aplicativo
 LOGOUT_REDIRECT_URL = 'login'
 
+#Especificación de los archivos media, según documentación
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+#Url de los archivos media
 MEDIA_URL = '/media/'
 
+# Modelo de la autentificación y registro de los usuarios
 AUTH_USER_MODEL = 'registro.RegistroUsuario'
 
+#Url del login
 LOGIN_URL = 'login'
 
+#Configuración de la libreria Jazzmin para el admin de la aplicación
 JAZZMIN_SETTINGS = {
     'site_title': 'More or Less',
     'site_header': 'More or Less',
