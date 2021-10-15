@@ -3,11 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="proyecto terminado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/categorias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/homepage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/metas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/metas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/metas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/registro/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +198,9 @@
       <workItem from="1633616437264" duration="3707000" />
       <workItem from="1633719645642" duration="2248000" />
       <workItem from="1633995835082" duration="2905000" />
-      <workItem from="1634047749920" duration="3993000" />
+      <workItem from="1634047749920" duration="5987000" />
+      <workItem from="1634242377691" duration="5056000" />
+      <workItem from="1634316746544" duration="1436000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>
@@ -388,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633720794029</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="proyecto terminado">
+      <created>1634055306926</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1634055306926</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
