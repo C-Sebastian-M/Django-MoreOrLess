@@ -8,12 +8,16 @@ from core.perfil.models import PerfilModel
 
 # Create your views here.
 
-
+#Aquí van a estar el listview
 class PerfilListView(ListView):
+    # Especificación del modelo donde se guardara la información
     model = PerfilModel
+    # Especificación del template html que vamos a utilizar
     template_name = 'perfil.html'
 
+    # Metodo de seguridad
     @method_decorator(csrf_exempt)
+    # Metodo para requerir estar logeado
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self

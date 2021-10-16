@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a13b5c-1550-46c3-b262-532a568074f4" name="Default Changelist" comment="Graficos de presupuesto y gastos añadidos, falta acomodar el filtro de fechas en las graficas de los informes.">
-      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/gastos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/gastos/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/informes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/informes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/informes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/informes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/metas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/metas/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/presupuesto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/presupuesto/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/categorias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/categorias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/homepage/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/homepage/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/homepage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/perfil/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/perfil/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +191,7 @@
       <workItem from="1633024606265" duration="8112000" />
       <workItem from="1633034769588" duration="639000" />
       <workItem from="1634320217351" duration="10346000" />
+      <workItem from="1634348141243" duration="3088000" />
     </task>
     <task id="LOCAL-00001" summary="Agregamos modelos, urls">
       <created>1625692827671</created>

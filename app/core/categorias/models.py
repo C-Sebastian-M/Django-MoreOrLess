@@ -5,9 +5,12 @@ from crum import get_current_user
 
 # Create your models here.
 
+#Modelo de la base de datos, llamando a la clase BaseModel para discriminacion de usuarios
 class Categoria(BaseModel):
+    #modelo category con personalizaciones específicas
     category = models.CharField(max_length=50, verbose_name='Categoria')
 
+    #Elemento para gusradar la categoría dependiendo de su id identificador
     def save(self, force_insert=False, force_update=False, usig=None,
              update_fields=None):
         user = get_current_user()
